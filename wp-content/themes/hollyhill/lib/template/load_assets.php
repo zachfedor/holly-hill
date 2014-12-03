@@ -6,7 +6,8 @@
 remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
 add_action( 'genesis_meta', 'child_stylesheet_cdn' );
 function child_stylesheet_cdn() {
-	echo '<link rel="stylesheet" href="'. get_bloginfo('stylesheet_directory') .'/assets/css/theme.min.css" type="text/css" media="screen" />'."\n";
+	//echo '<link rel="stylesheet" href="'. get_bloginfo('stylesheet_directory') .'/assets/css/theme.min.css" type="text/css" media="screen" />'."\n";
+	echo '<link rel="stylesheet" href="'. get_bloginfo('stylesheet_directory') .'/assets/css/theme.css" type="text/css" media="screen" />'."\n";
 }
 
 
@@ -22,8 +23,8 @@ function child_stylesheet_uri( $stylesheet_uri ) {
 /************************************************************
  * Enque Custom Scripts
  ************************************************************/
-add_action( 'wp_enqueue_scripts', 'enqueue_scripts', 99);
-function enqueue_scripts(){
+//add_action( 'wp_enqueue_scripts', 'minified_enqueue_scripts', 99);
+function minified_enqueue_scripts(){
 	wp_enqueue_style('bootstrap-css', get_bloginfo('stylesheet_directory') . '/assets/css/bootstrap.min.css');
 
 	//wp_enqueue_script('js-plugins', get_bloginfo('stylesheet_directory') . '/assets/js/includes/plugins.js', array('jquery'), '1', true);
@@ -37,3 +38,20 @@ function enqueue_scripts(){
 	    //exit;
 	}
 }
+
+add_action( 'wp_enqueue_scripts', 'enqueue_scripts', 99);
+function enqueue_scripts(){
+    wp_enqueue_style('bootstrap-css', get_bloginfo('stylesheet_directory') . '/assets/css/bootstrap.css');
+
+    //wp_enqueue_script('js-plugins', get_bloginfo('stylesheet_directory') . '/assets/js/includes/plugins.js', array('jquery'), '1', true);
+    wp_enqueue_script('bootstrap-js', get_bloginfo('stylesheet_directory') . '/assets/js/bootstrap.js', array('jquery'), '1', true);
+    wp_enqueue_script('main-js', get_bloginfo('stylesheet_directory') . '/assets/js/javascript.js', array('jquery'), '1', true);
+
+    // Add CSS3 psuedo selectors to IE 6-8
+    if(preg_match('/(?i)msie [6-8]/',$_SERVER['HTTP_USER_AGENT']))
+    {
+        wp_enqueue_script('selectivizr-js', get_bloginfo('stylesheet_directory') . '/assets/js/vendor/selectivizr-min.js', array( ), '', true);
+        //exit;
+    }
+}
+
