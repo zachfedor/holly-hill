@@ -1,0 +1,93 @@
+// Use with @extend to make reponsive modules
+%wrap {
+	margin: 0 auto;
+	width: 100%;
+	max-width: $siteWidth;
+	padding-left: 50px;
+	padding-right: 50px;
+	@include breakpoint(tablet) {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
+
+%inline-block {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+%image-replacement {
+	overflow: hidden;
+	text-indent: 200%;
+	white-space: nowrap;
+}
+
+// http://nicolasgallagher.com/micro-clearfix-hack/
+%clearfix {
+	zoom: 1;			// For IE
+
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+.visuallyhidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	border: 0;
+}
+
+.no-js {
+
+	.hide-no-js {
+		display: none !important;
+	}
+}
+
+// Extend to buttons to give them a 1px shift on click
+%click-effect {
+
+	&:active {
+		position: relative;
+		top: 1px;
+		left: 1px;
+	}
+}
+
+%unstyled-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.valign-outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.valign-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.valign-inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 100%;
+}

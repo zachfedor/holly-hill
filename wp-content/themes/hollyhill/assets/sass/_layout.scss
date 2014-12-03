@@ -1,0 +1,83 @@
+html, body {
+	min-width: 320px;
+	//overflow-x: hidden;
+}
+
+.wrap,
+.site-inner {
+	//@extend %wrap;
+}
+
+.site-inner {
+	@extend %clearfix;
+
+  /*
+    @include breakpoint(medium){
+      background: red;
+    }
+    @include breakpoint(small){
+      background: blue;
+    }
+    @include breakpoint(xsmall){
+      background: green;
+    }
+    */
+
+}
+
+.content {
+	width: percentage(752px / 1152px); /* 752px / 1152px */
+}
+
+.sidebar-primary {
+	width: percentage(352px / 1152px); /* 352px / 1152px */
+}
+
+.sidebar-secondary {
+	width: percentage(176px / 1152px); /* 176px / 1152px */
+}
+
+.content-sidebar-sidebar,
+.sidebar-content-sidebar,
+.sidebar-sidebar-content {
+
+	.content-sidebar-wrap {
+		width: percentage(928px / 1152px); /* 928px / 1152px */
+	}
+	
+}
+
+.content-sidebar .content-sidebar-wrap,
+.full-width-content .content,
+.full-width-content .content-sidebar-wrap,
+.sidebar-content .content-sidebar-wrap {
+	width: percentage(1152px / 1152px); /* 1152px / 1152px */
+}
+
+.sidebar-content .sidebar-primary,
+.sidebar-sidebar-content .sidebar-primary,
+.content,
+.content-sidebar-wrap,
+.sidebar-sidebar-content .sidebar-secondary,
+.sidebar-content-content .sidebar-secondary {
+	float: left;
+}
+
+.content-sidebar-sidebar .sidebar-secondary,
+.sidebar-primary,
+.sidebar-content .content,
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content,
+.sidebar-sidebar-content .content-sidebar-wrap {
+	float: right;
+}
+.content,
+.sidebar-primary,
+.sidebar-secondary,
+.content-sidebar-sidebar .content-sidebar-wrap,
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+	@include breakpoint(tablet) {
+		width: 100%;
+	}
+}

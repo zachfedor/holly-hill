@@ -1,0 +1,74 @@
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	// min-width: $siteWidth; // Prevents backgrounds on these elements from being truncated on smaller screens on fixed-width sites
+}
+
+body {
+	font-weight: 300;
+	font-family: $LatoRegular;
+	@include font-size(13);
+    color:#353535;
+	// text-rendering: optimizeLegibility; // Use with caution. May break certain @font-face fonts.
+
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button {
+	transition: all 0.1s ease-in-out;
+}
+
+::selection {
+	// text-shadow: none;
+}
+
+a {
+
+	&:hover,
+	&:focus,
+	&:active {
+
+	}
+}
+
+ol,
+ul {
+	@extend %unstyled-list;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+    font-weight: 300;
+}
+
+strong {
+	font-weight: 700;
+}
+
+em{
+  font-style: italic;
+}
+
+pre {
+	overflow: scroll;
+	white-space: pre;
+}
+
+code {
+	word-break: break-word;
+	overflow: hidden;
+}
+
+iframe {
+	border: none;
+}

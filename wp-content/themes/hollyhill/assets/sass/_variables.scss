@@ -1,0 +1,87 @@
+/*********************
+SIZES
+*********************/
+$siteWidth:		1400px; // Useful for fixed width sites, as well as for limiting the max-width of fluid sites
+$percentage:		.6527778; // Useful for fixed width sites, as well as for limiting the max-width of fluid sites
+
+@mixin breakpoint($point) {
+  @if $point == full {
+    @media (min-width: 1300px) { @content; }
+  }
+  @else if $point == large {
+    @media (max-width: 1200px) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: 992px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 880px) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 767px) { @content; }
+  }
+  @else if $point == phone {
+    @media screen and (max-width: 720px) { @content; }
+  }
+  @else if $point == xsmall {
+    @media screen and (max-width: 568px) { @content; }
+  }
+  @else if $point == xxsmall {
+    @media screen and (max-width: 360px) { @content; }
+  }
+	// http://mir.aculo.us/2012/11/28/the-ultimate-target-retina-screens-media-query/
+	@else if $point == retina {
+		@media
+			screen and (min--moz-device-pixel-ratio: 1.5),
+			screen and (-o-min-device-pixel-ratio: 3/2),
+			screen and (-webkit-min-device-pixel-ratio: 1.5),
+			screen and (min-device-pixel-ratio: 1.5),
+			screen and (min-resolution: 144dpi),
+			screen and (min-resolution: 1.5dppx)
+		{
+			@content;
+		}
+	}
+}
+
+
+/*********************
+COLORS
+*********************/
+$green: #6CA948;
+$dark_green: #6AA047;
+$blue: #2A367A;
+$child_green: #7DC469;
+$child_blue: #21598E;
+
+/*********************
+SOCIAL COLORS - http://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+*********************/
+$twitter:			#00aced;
+$facebook: 			#3b5998;
+$linkedin:			#007bb6;
+$google:			#dd4b39;
+$youtube:			#bb0000;
+$pinterest: 		#cb2027;
+$tumblr:			#32506d;
+$flickr:			#ff0084;
+$instagram:			#517fa4;
+$vimeo:				#aad450;
+$foursquare: 		#0072b1;
+$rss:				#ff6600;
+
+/*********************
+SPRITES
+*********************/
+
+/*********************
+TYPOGRAPHY - http://cssfontstack.com/
+*********************/
+// 'Better Helvetica' via http://css-tricks.com/snippets/css/better-helvetica/
+$sans: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+$LatoRegular: 'LatoRegular', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$LatoLight: 'LatoLight', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$LatoSemiBold: 'LatoSemiBold', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$BemboSemiBold: 'BemboSemiBold', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$BemboSemiBoldItalic: 'BemboSemiBoldItalic', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;

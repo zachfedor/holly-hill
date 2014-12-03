@@ -1,0 +1,114 @@
+.nav-primary{
+  width:100%;
+  //height:50px;
+  background:$green;
+}
+
+
+.genesis-nav-menu {
+	@extend %clearfix;
+	@extend %unstyled-list;
+	width: 100%;
+	
+	> .wrap {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.menu-item {
+		position: relative;
+		display: inline-block;
+		text-align: left;
+
+		&:hover,
+		&:focus,
+		&:active,
+		&.sfHover {
+
+			> .sub-menu {
+				left: auto;
+				opacity: 1;
+			}
+		}
+	}
+
+	a {
+        font-family: $LatoRegular;
+        @include font-size(16);
+		position: relative;
+		display: block;
+        color:#fff;
+        padding:20px 10px;
+        text-decoration: none;
+	}
+
+	a:hover,
+	a:focus,
+	a:active,
+	.current-menu-item > a,
+	.sub-menu .current-menu-item > a:hover {
+      color:#fff;
+      text-decoration:none;
+      background: $blue;
+	}
+
+	.sub-menu .current-menu-item > a {
+
+	}
+
+	> .menu-item > a {
+
+	}
+
+	.sub-menu {
+		position: absolute;
+		top: 100%;
+		left: -9999px;
+		z-index: 99;
+		opacity: 0;
+		transition: opacity .4s ease-in-out;
+        background: $blue;
+        width:240px;
+
+      .menu-item{
+        width:100%;
+      }
+
+		a {
+			position: relative;
+            font-family: $LatoLight;
+            @include font-size(15);
+            color: #fff;
+            padding:7px 10px;
+
+          &:hover{
+            background: $green;
+            text-decoration: none;
+          }
+		}
+
+		.sub-menu {
+          left:240px !important;
+          top:0px !important;
+
+		}
+	}
+
+	> .first {
+
+		> a {
+
+		}
+	}
+
+	> .last {
+
+		> a {
+
+		}
+	}
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;    
+}

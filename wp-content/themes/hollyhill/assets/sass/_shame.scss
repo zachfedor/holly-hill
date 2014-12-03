@@ -1,0 +1,26 @@
+.hh-btn{
+  display:inline-block;
+  background: transparent;
+  color: $blue;
+  border: 1px solid $blue;
+  border-radius:0;
+  padding:15px 20px;
+  margin-top:15px;
+  @include font-size(21);
+  text-transform: uppercase;
+  font-family: $LatoSemiBold;
+  &:hover{
+    color:$green;
+    border-color: $green;
+    text-decoration: none;
+  }
+
+  &.green{
+    color:$green;
+    border-color: $green;
+    &:hover{
+      color: $blue;
+      border: 1px solid $blue;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+# ignore all files starting with .
+\.*
+
+# include .gitignore (i.e. do NOT ignore)
+!.gitignore
+
+assets/css/theme.min.css
+assets/css/theme.min.css.map
+
+assets/js/javascript.min.js
+
+node_modules/

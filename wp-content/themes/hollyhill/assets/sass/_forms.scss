@@ -1,0 +1,263 @@
+input:focus,
+textarea:focus {
+	// outline: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+textarea {
+	max-width: 100%;
+	width: 100%;
+	border-radius: 0;		// Removes the border radius on iOS
+}
+
+input[type="password"] {
+	font-family: monospace; // Not all fonts will show the password bullets in IE8
+}
+
+select {
+	width: 100%;
+}
+
+.placeholder {
+	text-overflow: ellipsis;
+}
+
+::placeholder {
+	text-overflow: ellipsis;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+	width: auto;
+	line-height: 1;
+	cursor: pointer;
+
+	&:hover,
+	&:focus,
+	&:active {
+
+	}
+}
+
+input[type="search"] {
+	box-sizing: border-box; // Overrides normalize.css
+}
+
+/******************************************************
+	These are specific Gravity Form styles
+	Turn off Gravity Form output css for these to work.
+*******************************************************/
+
+.gform_validation_container,
+.gform_wrapper .gform_validation_container,
+body .gform_wrapper li.gform_validation_container,
+body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container,
+body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
+	display: none !important;
+	position: absolute !important;
+	left: -9000px;
+}
+
+.gform_wrapper {
+	input[type=text],
+	input[type=url],
+	input[type=email],
+	input[type=tel],
+	input[type=number],
+	input[type=password] {
+		padding: 5px 12px;
+		@include font-size(16);
+	}
+	ul.gform_fields {
+		margin: 0;
+	}
+	.gfield {
+		background-image: none;
+		padding: 0;
+		margin: 0 0 8px 0;
+	}
+	.ginput_container {
+		+ .gfield_description.validation_message {
+			@include font-size(13);
+			color: red;
+			font-weight: 400;
+			margin: 3px 0 10px 0;
+		}
+	}
+	div.validation_error {
+		font-weight: 700;
+		color: #222;
+		background-color: lighten(red, 40%);
+		padding: 20px 15px;
+		margin: 0 0 20px 0;
+		border: 1px solid red;
+		@include border-radius(10px);
+	}
+	.gfield_label {
+		font-weight: 400;
+	}
+	.top_label {
+		.gfield_label {
+			margin: 10px 0 4px 0;
+			//font-weight: bold;
+			display: inline-block;
+			line-height: 1.3em;
+			clear: both;
+		}
+		input.large,
+		select.large,
+		textarea.large {
+			width: 100%;
+		}
+		input.medium,
+		select.medium,
+		textarea.medium {
+			width: 49%;
+		}
+		input.small,
+		select.small,
+		textarea.small {
+			width: 25%;
+		}
+	}
+	.left_label	{
+		.gfield_label {
+			float: left;
+			margin-right: 2%;
+			width: 29%;
+		}
+	}
+	.right_label	{
+		.gfield_label {
+			float: left;
+			margin-right: 2%;
+			width: 29%;
+			text-align: right;
+		}
+	}
+	.left_label,
+	.right_label {
+		input.large,
+		select.large,
+		textarea.large {
+			width: 69%;
+		}
+		input.medium,
+		select.medium,
+		textarea.medium {
+			width: 34%;
+		}
+		input.small,
+		select.small,
+		textarea.small {
+			width: 15%;
+		}
+		.ginput_container {
+			+ .gfield_description.validation_message,
+			.instruction {
+				padding-left: 31%;
+			}
+		}
+		div.ginput_complex {
+			width: 69%;
+			overflow: hidden;
+		}
+	}
+	ul.right_label li,
+	form ul.right_label li,
+	ul.left_label li,
+	form ul.left_label li {
+		margin-bottom: 15px;
+	}
+	.gform_footer.right_label,
+	.gform_footer.left_label {
+		padding: 10px 0 10px 31%;
+	}
+	.ginput_complex {
+		@extend %clearfix;
+		input[type=text],
+		input[type=url],
+		input[type=email],
+		input[type=tel],
+		input[type=number],
+		input[type=password],
+		select {
+			width: 100%;
+		}
+		.ginput_full input[type=text],
+		.ginput_full input[type=url],
+		.ginput_full input[type=email],
+		.ginput_full input[type=tel],
+		.ginput_full input[type=number],
+		.ginput_full input[type=password] {
+			width: 100%;
+		}
+		.ginput_left {
+			width: 49%;
+			float: left;
+		}
+		.ginput_right {
+			width: 49%;
+			float: right;
+		}
+		.ginput_left,
+		.ginput_right,
+		.ginput_full {
+			display: block;
+			overflow: hidden;
+		}
+	}
+	.complex_1col {
+		.ginput_complex {
+			.ginput_left,
+			.ginput_right,
+			.ginput_full {
+				float: none;
+				width: 100%;
+			}
+		}
+		&.medium {
+			.ginput_complex {
+				.ginput_left,
+				.ginput_right,
+				.ginput_full {
+					width: 49%;
+				}
+			}
+		}
+		&.small {
+			.ginput_complex {
+				.ginput_left,
+				.ginput_right,
+				.ginput_full {
+					width: 22%;
+				}
+			}
+		}
+	}
+	.ginput_complex label,
+	.gfield_time_hour label,
+	.gfield_time_minute label,
+	.gfield_date_month label,
+	.gfield_date_day label,
+	.gfield_date_year label,
+	.instruction {
+		display: block;
+		@include font-size(11);
+		margin: 1px 0 7px;
+		letter-spacing: 0.5pt;
+	}
+}

@@ -1,0 +1,137 @@
+.home{
+
+}
+
+.featured-area{
+    .container{
+      bottom: 0;
+      position: absolute;
+    }
+    .slide-block{
+      background: none repeat scroll 0 0 $blue;
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      width: 300px;
+      padding: 30px;
+    }
+    .slide-block-content{
+
+    }
+}
+
+.homepage-intro{
+  padding: 40px 0;
+
+  h2{
+
+    color: $blue;
+    @include font-size(32);
+    font-family: $BemboSemiBoldItalic;
+    margin:0;
+    padding:0 0 10px;
+
+  }
+  .intro{
+
+    font-family: $LatoRegular;
+    @include font-size(13);
+    color:#353535;
+
+    h3{
+      color: $blue;
+      @include font-size(23);
+      font-family: $BemboSemiBoldItalic;
+      margin:0;
+      padding:0 0 10px;
+    }
+
+  }
+  .hh-btn{
+    @include font-size(18);
+    float:left;
+  }
+}
+
+.program-icons {
+
+  text-align:center;
+
+  .program-col{
+    width:20%;
+
+    @include breakpoint(small){
+      width:100%;
+      float:left;
+    }
+  }
+
+  .icon{
+    display:inline-block;
+  }
+
+  .icon-mental-health {
+    background: url('../../assets/images/icon-mental-health.png') center 0 no-repeat;
+    background-size: 58px 80px;
+    width: 58px;
+    height: 80px;
+    text-indent: -99999em;
+    margin: 0 auto;
+  }
+  .icon-geriatrics {
+    background: url('../../assets/images/icon-geriatrics.png') center 0 no-repeat;
+    background-size: 76px 79px;
+    width: 76px;
+    height: 79px;
+    text-indent: -99999em;
+    margin: 0 auto;
+  }
+  .icon-substance-abuse {
+    background: url('../../assets/images/icon-substance-abuse.png') center 0 no-repeat;
+    background-size: 82px 79px;
+    width: 82px;
+    height: 79px;
+    text-indent: -99999em;
+    margin: 0 auto;
+  }
+  .icon-outpatient {
+    background: url('../../assets/images/icon-outpatient.png') center 0 no-repeat;
+    background-size: 91px 77px;
+    width: 91px;
+    height: 77px;
+    text-indent: -99999em;
+    margin: 0 auto;
+  }
+  .icon-all-programs {
+    background: url('../../assets/images/icon-all.png') center 0 no-repeat;
+    background-size: 150px 76px;
+    width: 150px;
+    height: 76px;
+    text-indent: -99999em;
+    margin: 0 auto;
+  }
+
+  .program-btn{
+    display:block;
+    background: transparent;
+    border: 1px solid $blue;
+    border-radius:0;
+    padding:15px 20px;
+    margin:20px 0;
+    color: $blue;
+    @include font-size(15);
+    text-transform: uppercase;
+    font-family: $LatoSemiBold;
+
+    @include breakpoint(small){
+      width:100%;
+    }
+
+    &:hover{
+      color:$green;
+      border-color: $green;
+      text-decoration: none;
+    }
+  }
+
+}
