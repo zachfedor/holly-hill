@@ -11,3 +11,5 @@ include_once(CHILD_DIR.'/lib/layout/sidebar.php');
 
 // Footer
 include_once(CHILD_DIR.'/lib/layout/footer.php');
+
+//include_once(CHILD_DIR.'/lib/layout/search_form.php');

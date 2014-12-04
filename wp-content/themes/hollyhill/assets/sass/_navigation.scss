@@ -8,6 +8,54 @@
   .child-campus &{
     background: $child_green;
   }
+
+  .container{
+    position:relative;
+  }
+
+  .search-toggle{
+    background: url('../../assets/images/icon-search.png') no-repeat center center;
+    height:103px;
+    width:103px;
+    position:absolute;
+    right:0;
+    top:-27px;
+    z-index:999;
+    text-indent:-99999em;
+
+  }
+  .search-form{
+    width: 250px;
+    position: absolute;
+    background: $blue;
+    padding: 20px 10px 10px 10px;
+    right: 20px;
+    .child-campus &{
+      background: $child_blue;
+    }
+
+    input[type="search"]{
+      width:70%;
+      height:40px;
+      padding:5px 10px;
+      @include font-size(14);
+      border:0px;
+    }
+    input[type="submit"]{
+      width:30%;
+      padding:0px 10px;
+      height:40px;
+      background:$child_blue;
+      @include font-size(14);
+      border:0px;
+      font-family: $LatoRegular;
+      color:#fff;
+      .child-campus &{
+        background: $blue;
+      }
+    }
+  }
+
 }
 
 .genesis-nav-menu {
@@ -43,7 +91,7 @@
 		position: relative;
 		display: block;
         color:#fff;
-        padding:20px 10px;
+        padding:10px;
         text-decoration: none;
 	}
 
