@@ -8,6 +8,30 @@
   .child-campus &{
     background: $child_green;
   }
+
+  .container{
+    position:relative;
+  }
+
+  .search-toggle{
+    background: url('../../assets/images/icon-search.png') no-repeat center center;
+    height:103px;
+    width:103px;
+    position:absolute;
+    right:0;
+    top:-27px;
+    z-index:999;
+    text-indent:-99999em;
+
+  }
+  .search-form{
+    width: 250px;
+    position: absolute;
+    background: red;
+    padding: 20px;
+    right: 0;
+  }
+
 }
 
 .genesis-nav-menu {
@@ -43,7 +67,7 @@
 		position: relative;
 		display: block;
         color:#fff;
-        padding:20px 10px;
+        padding:10px;
         text-decoration: none;
 	}
 

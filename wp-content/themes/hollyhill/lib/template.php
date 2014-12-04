@@ -15,3 +15,5 @@ include(CHILD_DIR.'/lib/template/content_filters.php');
 include(CHILD_DIR.'/lib/template/is_tree.php');
 include(CHILD_DIR.'/lib/template/campus_color_scheme.php');
 
+include_once(CHILD_DIR.'/lib/template/search_form.php');
+

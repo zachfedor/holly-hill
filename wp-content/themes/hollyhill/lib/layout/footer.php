@@ -11,7 +11,7 @@
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 //remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 ) ;
 
-//add_action( 'genesis_footer', 'hh_pre_footer' ) ;
+add_action( 'genesis_footer', 'hh_pre_footer' ) ;
 function hh_pre_footer(){ ?>
     <div class="pre-footer fluid-container">
         <div class="contact-us row">
