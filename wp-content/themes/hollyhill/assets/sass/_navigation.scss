@@ -27,9 +27,12 @@
   .search-form{
     width: 250px;
     position: absolute;
-    background: red;
+    background: $blue;
     padding: 20px;
     right: 0;
+    .child-campus &{
+      background: $child_blue;
+    }
   }
 
 }
