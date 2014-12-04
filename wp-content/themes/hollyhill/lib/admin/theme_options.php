@@ -292,6 +292,23 @@
                     )
                 );
 
+                $this->sections[] = array(
+                    'title'  => __( 'Campus Settings', 'hh_theme_options' ),
+                    'desc'   => __( 'These are settings for the campus layout.' ),
+                    'icon'   => 'el-icon-home',
+                    // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
+                    'fields' => array(
+
+                        array(
+                            'id'       => 'child_campus_homepage_id',
+                            'type'     => 'select',
+                            'title'    => __( 'Child Campus Homepage', 'hh_theme_options' ),
+                            'data'     => 'page'
+                        )
+
+                    )
+                );
+
 
 /*
                 $this->sections[] = array(

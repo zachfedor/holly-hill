@@ -12,3 +12,6 @@ include(CHILD_DIR.'/lib/template/image_sizes.php');
 include(CHILD_DIR.'/lib/template/favicon.php');
 include(CHILD_DIR.'/lib/template/google_analytics.php');
 include(CHILD_DIR.'/lib/template/content_filters.php');
+include(CHILD_DIR.'/lib/template/is_tree.php');
+include(CHILD_DIR.'/lib/template/campus_color_scheme.php');
+

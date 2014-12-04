@@ -19,6 +19,17 @@
 
 	.widget {
 		overflow: hidden;
+        padding:25px;
+        background: $blue;
+        color:#fff;
+        .child-campus &{
+          background: $child_blue;
+
+        }
+        a{
+          color:#fff;
+        }
+
 	}
 
 	.widgettitle {

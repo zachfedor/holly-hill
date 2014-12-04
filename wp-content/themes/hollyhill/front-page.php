@@ -59,10 +59,11 @@ function hh_homepage_intro(){
     echo '</div>';
 }
 
-add_action('genesis_after_content', 'hh_homepage_programs');
+add_action('genesis_before_footer', 'hh_homepage_programs');
 function hh_homepage_programs(){
     ?>
     <div class="row program-icons">
+        <div class="container">
         <div class="col-xs-12 col-sm-6 col-md-2 program-col">
             <div class="icon-mental-health">ICON 1</div>
             <a href="#" class="program-btn">Mental Health</a>
@@ -83,6 +84,7 @@ function hh_homepage_programs(){
             <div class="icon-all-programs">ICON 5</div>
             <a href="#" class="program-btn">All Programs</a>
         </div>
+            </div>
     </div>
 <?php
 }

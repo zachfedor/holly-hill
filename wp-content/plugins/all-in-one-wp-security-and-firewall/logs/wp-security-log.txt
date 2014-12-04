@@ -1,0 +1,2 @@
+[12/03/2014 8:32 PM] - FAILURE : Error inserting record into xdkstf_aiowps_login_activity
+[12/03/2014 8:32 PM] - FAILURE : Error inserting record into xdkstf_aiowps_login_activity

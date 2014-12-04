@@ -1,5 +1,12 @@
 <?php
 
+add_filter( 'genesis_superfish_enabled', '__return_true' );
+
+function hh_register_child_campus_nav_menu() {
+    register_nav_menu('child-campus-navigation',__( 'Child Campus Navigation' ));
+}
+add_action( 'init', 'hh_register_child_campus_nav_menu' );
+
 //remove_action( 'genesis_after_header', 'genesis_do_nav' );
 //add_action( 'genesis_after_header', 'jst_primary_navigation', 11 );
 function jst_primary_navigation(){

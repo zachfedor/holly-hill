@@ -6,6 +6,15 @@
 	overflow: hidden;
 	word-break: break-word;
 
+  color: $blue;
+  @include font-size(32);
+  font-family: $BemboSemiBoldItalic;
+  margin:0;
+  padding:0 0 10px;
+  .child-campus &{
+    color: $child_blue;
+  }
+
 	a {
 		color: inherit;
 
@@ -23,6 +32,10 @@
 
 .entry-content {
 	// overflow: hidden;
+
+    font-family: $LatoRegular;
+    @include font-size(13);
+    color:#353535;
 
 	a {
 

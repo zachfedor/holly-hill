@@ -29,3 +29,8 @@
 function child_do_sidebar() {
 	if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( 'Alternative Sidebar' ) ) {
 }}
+
+add_action('genesis_before_sidebar_widget_area', 'hh_page_children_nav');
+function hh_page_children_nav(){ ?>
+
+<?php }

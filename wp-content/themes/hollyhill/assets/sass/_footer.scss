@@ -38,7 +38,7 @@
 
   .footer-logo{
     background: url('../../assets/images/logo.png') no-repeat center center;
-    z-index:9999;
+    z-index:100;
     margin:-10px 0 0;
     width:115px;
     height:115px;
@@ -57,17 +57,31 @@
       background:$blue;
       border-bottom:20px solid $green;
 
+      .child-campus &{
+        background:$child_blue;
+        border-bottom:20px solid $child_green;
+      }
+
     }
 
     .get-started{
       //background:red;
       background: url('../../assets/images/pattern-one.png') repeat 0 0;
       padding:40px 0;
+
+      .child-campus &{
+        background: url('../../assets/images/pattern-two.png') repeat 0 0;
+      }
+
       h3{
         margin:0;
         @include font-size(30);
         font-family: $LatoLight;
         color: $blue;
+        .child-campus &{
+          color: $child_blue;
+
+        }
       }
       @include breakpoint(small) {
         .cta-button {
@@ -87,6 +101,9 @@
     background:$green;
     padding:0 0 20px 0;
 
+    .child-campus &{
+      background:$child_green;
+    }
 
     .footer-navigation,
     .logo-action-alliance,
@@ -114,6 +131,10 @@
     font-family: $LatoLight;
     color: #fff;
     @include font-size(17);
+
+    .child-campus &{
+      background:$child_dark_green;
+    }
 
     @include breakpoint(small){
       width:100%;
@@ -196,7 +217,10 @@
   .sub-menu .current-menu-item > a:hover {
     color:#fff;
     text-decoration:none;
-    background: $blue;
+    //background: $blue;
+    .child-campus &{
+      //background:$child_blue;
+    }
   }
 
   .sub-menu .current-menu-item > a {
@@ -217,6 +241,10 @@
     background: $blue;
     width:200px;
 
+    .child-campus &{
+      background:$child_blue;
+    }
+
     .menu-item{
       width:100%;
     }
@@ -229,6 +257,10 @@
       &:hover{
         background: $green;
         text-decoration: none;
+
+        .child-campus &{
+          background:$child_green;
+        }
       }
     }
 

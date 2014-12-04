@@ -3,6 +3,10 @@
   background: url('../../assets/images/pattern-one.png') repeat 0 0;
   overflow:hidden;
 
+  .child-campus &{
+    background: url('../../assets/images/pattern-two.png') repeat 0 0;
+  }
+
   @include breakpoint(xsmall){
     width:100%;
   }
@@ -38,6 +42,11 @@
     position: relative;
     padding:0px 40px;
     margin:48px 0 0;
+
+    .child-campus &{
+      background:$child_green;
+    }
+
     @include breakpoint(xsmall){
       padding:0;
     }

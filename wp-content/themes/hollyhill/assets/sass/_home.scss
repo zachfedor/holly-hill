@@ -14,6 +14,10 @@
       right: 0;
       width: 300px;
       padding: 30px;
+
+      .child-campus &{
+        background: none repeat scroll 0 0 $child_blue;
+      }
     }
     .slide-block-content{
 
@@ -30,7 +34,9 @@
     font-family: $BemboSemiBoldItalic;
     margin:0;
     padding:0 0 10px;
-
+    .child-campus &{
+      color: $child_blue;
+    }
   }
   .intro{
 
@@ -44,6 +50,9 @@
       font-family: $BemboSemiBoldItalic;
       margin:0;
       padding:0 0 10px;
+      .child-campus &{
+        color: $child_blue;
+      }
     }
 
   }
@@ -55,7 +64,13 @@
 
 .program-icons {
 
+  background: url('../../assets/images/pattern-one.png') repeat 0 0;
+  padding:20px 0 10px;
   text-align:center;
+
+  .child-campus &{
+    background: url('../../assets/images/pattern-two.png') repeat 0 0;
+  }
 
   .program-col{
     width:20%;
@@ -122,6 +137,11 @@
     @include font-size(15);
     text-transform: uppercase;
     font-family: $LatoSemiBold;
+
+    .child-campus &{
+      color: $child_blue;
+      border: 1px solid $child_blue;
+    }
 
     @include breakpoint(small){
       width:100%;
