@@ -47,7 +47,7 @@ function hh_homepage_intro(){
     echo '<div class="intro">';
     echo $hh_theme_options['homepage_intro_content'];
     echo '</div>';
-    echo '<a class="hh-btn" href="#">Learn More</a>';
+    echo '<a class="hh-btn" href="'. $hh_theme_options['homepage_intro_content'] .'">Learn More</a>';
     echo '</div>';
     echo '<div class="col-sm-4">';
     $attachment_id = $hh_theme_options['homepage_intro_image']['id'];

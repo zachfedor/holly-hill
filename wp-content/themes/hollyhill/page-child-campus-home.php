@@ -21,7 +21,10 @@ add_action('genesis_after_header', 'hh_child_campus_do_nav');
 
 function hh_child_campus_do_nav(){
 
-    $class = 'menu genesis-nav-menu menu-primary container';
+    $class = 'menu genesis-nav-menu menu-primary';
+
+    $search_form = '<a class="search-toggle" href="javascript:void(0);">Search <span class="icon icon-search"></span></a>';
+    $search_form .= get_search_form(false);
 
     wp_nav_menu( array(
             'menu'              => 'child-navigation',
@@ -32,8 +35,13 @@ function hh_child_campus_do_nav(){
             'container_id'      => 'nav',
             'menu_id'           => 'menu-primary-navigation',
             'menu_class'        => $class,
+            'items_wrap'        => '<div class="container"><ul id="%1$s" class="%2$s">%3$s</ul>' . $search_form .'</div>',
         )
     );
+
+
+
+    //echo $search_form;
 }
 
 function hh_child_campus_do_nav123() {
@@ -87,13 +95,14 @@ function hh_homepage_intro(){
     global $hh_theme_options;
     echo '<div class="row homepage-intro">';
     echo '<div class="col-sm-8">';
-    echo '<h2>'. $hh_theme_options['homepage_intro_headline'] .'</h2>';
+    echo '<h2>'. $hh_theme_options['child_campus_homepage_intro_headline'] .'</h2>';
     echo '<div class="intro">';
-    echo $hh_theme_options['homepage_intro_content'];
+    echo $hh_theme_options['child_campus_homepage_intro_content'];
     echo '</div>';
+    echo '<a class="hh-btn" href="#">Learn More</a>';
     echo '</div>';
     echo '<div class="col-sm-4">';
-    $attachment_id = $hh_theme_options['homepage_intro_image']['id'];
+    $attachment_id = $hh_theme_options['child_campus_homepage_intro_image']['id'];
     //$attachment_src = wp_get_attachment_image_src($attachment_id, 'medium', false);
     if($attachment_src = wp_get_attachment_image_src($attachment_id, 'medium', false)){
         echo '<img src="'. $attachment_src[0] .'" />';

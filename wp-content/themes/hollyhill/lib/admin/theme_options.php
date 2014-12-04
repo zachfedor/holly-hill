@@ -262,8 +262,8 @@
                 );
 
                 $this->sections[] = array(
-                    'title'  => __( 'Homepage Settings', 'hh_theme_options' ),
-                    'desc'   => __( 'These are settings for the homepage.' ),
+                    'title'  => __( 'Adult Campus', 'hh_theme_options' ),
+                    'desc'   => __( 'These are settings for the adult campus homepage.' ),
                     'icon'   => 'el-icon-home',
                     // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                     'fields' => array(
@@ -287,14 +287,20 @@
                             'id'       => 'homepage_intro_image',
                             'type'     => 'media',
                             'title'    => __( 'Intro Image', 'hh_theme_options' )
-                        )
+                        ),
+                        array(
+                            'id'       => 'homepage_intro_learnmore',
+                            'type'     => 'text',
+                            'title'    => __( 'Learn More URL', 'hh_theme_options' ),
+                            'default'  => site_url()
+                        ),
 
                     )
                 );
 
                 $this->sections[] = array(
-                    'title'  => __( 'Campus Settings', 'hh_theme_options' ),
-                    'desc'   => __( 'These are settings for the campus layout.' ),
+                    'title'  => __( 'Child Campus', 'hh_theme_options' ),
+                    'desc'   => __( 'These are settings for the child campus homepage.' ),
                     'icon'   => 'el-icon-home',
                     // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                     'fields' => array(
@@ -304,7 +310,33 @@
                             'type'     => 'select',
                             'title'    => __( 'Child Campus Homepage', 'hh_theme_options' ),
                             'data'     => 'page'
-                        )
+                        ),
+                        array(
+                            'id'       => 'child_campus_homepage_intro_headline',
+                            'type'     => 'text',
+                            'title'    => __( 'Intro Headline', 'hh_theme_options' ),
+                            'default'  => 'Welcome to Holly Hill Hospital'
+                        ),
+                        array(
+                            'id'       => 'child_campus_homepage_intro_content',
+                            'type'     => 'editor',
+                            'title'    => __( 'Intro Content', 'hh_theme_options' ),
+                            'default'  => 'Intro text goes here ...',
+                            'args'   => array(
+                                'wpautop' => true
+                            )
+                        ),
+                        array(
+                            'id'       => 'child_campus_homepage_intro_image',
+                            'type'     => 'media',
+                            'title'    => __( 'Intro Image', 'hh_theme_options' )
+                        ),
+                        array(
+                            'id'       => 'child_campus_homepage_intro_learnmore',
+                            'type'     => 'text',
+                            'title'    => __( 'Learn More URL', 'hh_theme_options' ),
+                            'default'  => site_url()
+                        ),
 
                     )
                 );
