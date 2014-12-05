@@ -62,29 +62,31 @@ function hh_homepage_intro(){
 add_action('genesis_before_footer', 'hh_homepage_programs');
 function hh_homepage_programs(){
     ?>
-    <div class="row program-icons">
+    <div class="program-icons">
         <div class="container">
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-mental-health">ICON 1</div>
-            <a href="#" class="program-btn">Mental Health</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-geriatrics">ICON 2</div>
-            <a href="#" class="program-btn">Geriatrics</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-substance-abuse">ICON 3</div>
-            <a href="#" class="program-btn">Substance Abuse</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-outpatient">ICON 4</div>
-            <a href="#" class="program-btn">Outpatient</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-all-programs">ICON 5</div>
-            <a href="#" class="program-btn">All Programs</a>
-        </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                    <div class="icon-mental-health">ICON 1</div>
+                    <a href="#" class="program-btn">Mental Health</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                    <div class="icon-geriatrics">ICON 2</div>
+                    <a href="#" class="program-btn">Geriatrics</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                    <div class="icon-substance-abuse">ICON 3</div>
+                    <a href="#" class="program-btn">Substance Abuse</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                    <div class="icon-outpatient">ICON 4</div>
+                    <a href="#" class="program-btn">Outpatient</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                    <div class="icon-all-programs">ICON 5</div>
+                    <a href="#" class="program-btn">All Programs</a>
+                </div>
             </div>
+        </div>
     </div>
 <?php
 }
