@@ -53,20 +53,57 @@
       background:$blue;
       letter-spacing: 2px;
 
+      .row {
+        position: relative;
+      }
+
       .contact-us-links {
-        padding-right: 55px;
-        margin-top: 75px;
+        padding-right: 15px;
+        
+        @include breakpoint(full) {
+          margin-top: 85px;
+          padding-right: 55px;
+        }
+        @include breakpoint(large) {
+          margin-top: 85px;
+          padding-right: 40px;
+        }
+        @include breakpoint(medium) {
+          margin-top: 75px;
+        }
+        @include breakpoint(tablet) {
+          margin-top: 50px;
+          padding-right: 15px;
+          height: 150px;
+        }
 
         .contact-us-phone {
           color: #ffffff;
-          font-size: 140%;
           font-weight: 100;
+
+          @include breakpoint(full) {
+            font-size: 140%;
+          }
+          @include breakpoint(large) {
+            font-size: 120%;
+          }
+          @include breakpoint(medium) {
+            font-size: 100%;
+            text-align: center;
+          }
 
           .contact-us-phone-number {
             color: #ffffff;
             font-weight: 400;
-            margin-left: 10px;
-            float: right;
+
+            @include breakpoint(large) {
+              margin-left: 10px;
+              float: right;
+            }
+            @include breakpoint(medium) {
+              float: none;
+              margin-left: 0px;
+            }
           }
         }
 
@@ -85,6 +122,19 @@
             text-align: center;
             margin: 0;
 
+            @include breakpoint(full) {
+              font-size: 160%;
+            }
+            @include breakpoint(large) {
+              font-size: 140%;
+            }
+            @include breakpoint(medium) {
+              font-size: 120%;
+            }
+            @include breakpoint(tablet) {
+              font-size: 100%;
+            }
+
             &:before {
               border-top: 1px solid #dddddd;
               content:"";
@@ -96,6 +146,11 @@
               bottom: 0;
               width: 90%;
               z-index: -1;
+
+
+              @include breakpoint(tablet) {
+                top: 25px;
+              }
             }
 
             span {
@@ -107,16 +162,31 @@
       }
 
       .get-directions {
-        padding-left: 55px;
         display: block;
         position: relative;
+        height: 200px;
+
+        @include breakpoint(medium) {
+          height: 300px;
+        }
+        @include breakpoint(tablet) {
+           height: 200px;
+         }
 
         &:before, &:after {
           content: "";
           position: absolute;
           top: 0;
           bottom: 0;
+          left: 0;
           width: 1000px;
+
+          @include breakpoint(medium) {
+            left: 15px;
+          }
+          @include breakpoint(tablet) {
+            left: 0;
+          }
         }
 
         &:before {
@@ -142,6 +212,67 @@
           float: right;
           position:relative;
           z-index: 3;
+
+          @include breakpoint(full) {
+            font-size: 190%;
+          }
+          @include breakpoint(large) {
+            font-size: 170%;
+          }
+          @include breakpoint(medium) {
+            font-size: 150%;
+            letter-spacing: 1px;
+            height: 100px;
+            margin: 90px auto;
+
+            img {
+              width: 100px;
+            }
+          }
+          @include breakpoint(tablet) {
+            font-size: 150%;
+            letter-spacing: 1px;
+            height: 200px;
+            margin: 0;
+            padding: 30px 0;
+            float: none;
+            text-align: center;
+
+            img {
+              width: 140px;
+            }
+          }
+        }
+      }
+
+      .css-arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 70px solid transparent;
+        border-bottom: 70px solid transparent;
+        border-left: 25px solid $blue;
+        z-index: 10;
+        position: absolute;
+        top: 70px;
+        left: 41.66667%;
+        margin-left: 15px;
+        display: block;
+        @include breakpoint(small) {
+          display: none;
+        }
+      }
+
+      .css-arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 40px solid red;
+        z-index: 10;
+        position: absolute;
+        display: none;
+        @include breakpoint(small) {
+          display: none;
         }
       }
 
