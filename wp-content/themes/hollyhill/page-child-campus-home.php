@@ -72,14 +72,14 @@ function hh_homepage_intro(){
 
     global $hh_theme_options;
     echo '<div class="row homepage-intro">';
-    echo '<div class="col-sm-6">';
+    echo '<div class="col-sm-6 intro-content">';
     echo '<h2>'. $hh_theme_options['child_campus_homepage_intro_headline'] .'</h2>';
     echo '<div class="intro">';
     echo $hh_theme_options['child_campus_homepage_intro_content'];
     echo '</div>';
-    echo '<a class="hh-btn" href="#">Learn More</a>';
+    echo '<a class="hh-btn green" href="#">Learn More</a>';
     echo '</div>';
-    echo '<div class="col-sm-6">';
+    echo '<div class="col-sm-6 intro-image hidden-sm hidden-xs">';
     $attachment_id = $hh_theme_options['child_campus_homepage_intro_image']['id'];
     //$attachment_src = wp_get_attachment_image_src($attachment_id, 'medium', false);
     if($attachment_src = wp_get_attachment_image_src($attachment_id, 'large', false)){
@@ -94,16 +94,16 @@ function hh_homepage_programs(){ ?>
     <div class="program-icons">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="col-xs-12 col-sm-6 col-md-3 program-col">
                     <a href="#" class="program-btn">Explore,<br /> Discover,<br /> Connect</a>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="col-xs-12 col-sm-6 col-md-3 program-col">
                     <a href="#" class="program-btn">Family<br />Involvement</a>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="col-xs-12 col-sm-6 col-md-3 program-col">
                     <a href="#" class="program-btn">Frequently<br />Asked<br />Questions</a>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="col-xs-12 col-sm-6 col-md-3 program-col">
                     <a href="#" class="program-btn">Visiting Hours<br />& Phone Times</a>
                 </div>
             </div>
