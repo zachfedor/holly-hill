@@ -12,7 +12,7 @@
       bottom: 0;
       position: absolute;
       right: 0;
-      width: 300px;
+      width: 40%;
       padding: 30px;
 
       .child-campus &{
@@ -20,12 +20,26 @@
       }
     }
     .slide-block-content{
+      p{
 
+      }
+      .slider-content{
+        font-family: $BemboBoldItalic;
+        @include font-size(22);
+        color:#fff;
+      }
+      .slider-caption{
+        font-family: $LatoLight;
+        @include font-size(18);
+        color:#fff;
+
+      }
     }
+
 }
 
 .homepage-intro{
-  padding: 40px 0;
+  padding: 0px 0;
 
   h2{
 
@@ -65,8 +79,8 @@
 .program-icons {
 
   background: url('../../assets/images/pattern-one.png') repeat 0 0;
-  padding:20px 0 10px;
-  text-align:center;
+  padding:40px 0;
+  //text-align:center;
 
   .child-campus &{
     background: url('../../assets/images/pattern-two.png') repeat 0 0;
@@ -128,19 +142,34 @@
 
   .program-btn{
     display:block;
+    text-align:left;
+    border: 0px;
+    background: url('../../assets/images/icon-arrow-blue-right.png') 90% 0 no-repeat $child_blue;
+    background-size:21px 91px;
+    padding:20px 15px;
+    color:#fff;
+    min-height:100px;
+    @include font-size(15);
+    text-transform: uppercase;
+    font-family: $LatoSemiBold;
+
+    /*
+    display:block;
     background: transparent;
     border: 1px solid $blue;
     border-radius:0;
     padding:15px 20px;
     margin:20px 0;
+    //min-height:225px;
     color: $blue;
     @include font-size(15);
     text-transform: uppercase;
     font-family: $LatoSemiBold;
-
+    */
     .child-campus &{
-      color: $child_blue;
-      border: 1px solid $child_blue;
+      //color: $child_blue;
+      //border: 1px solid $child_blue;
+
     }
 
     @include breakpoint(small){
@@ -155,3 +184,5 @@
   }
 
 }
+
+.child-campus .program-btn{ }

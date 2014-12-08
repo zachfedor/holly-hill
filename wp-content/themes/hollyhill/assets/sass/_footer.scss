@@ -31,15 +31,10 @@
   color:#fff !important;
   overflow:hidden;
 
-  .row{
-    margin-left:0;
-    margin-right:0;
-  }
-
   .footer-logo{
     background: url('../../assets/images/logo.png') no-repeat center center;
     z-index:100;
-    margin:-10px 0 0;
+    margin:-17px 0 0;
     width:115px;
     height:115px;
     background-size: 115px 115px;
@@ -51,11 +46,240 @@
   }
 
   .pre-footer{
+    overflow-x: hidden;
 
     .contact-us{
-      min-height:300px;
+      min-height: 280px;
       background:$blue;
-      border-bottom:20px solid $green;
+      letter-spacing: 2px;
+
+      .row {
+        position: relative;
+      }
+
+      .contact-us-links {
+        padding-right: 15px;
+        
+        @include breakpoint(full) {
+          margin-top: 85px;
+          padding-right: 55px;
+        }
+        @include breakpoint(large) {
+          margin-top: 85px;
+          padding-right: 40px;
+        }
+        @include breakpoint(medium) {
+          margin-top: 75px;
+        }
+        @include breakpoint(tablet) {
+          margin-top: 50px;
+          padding-right: 15px;
+          height: 150px;
+        }
+
+        .contact-us-phone {
+          color: #ffffff;
+          font-weight: 100;
+
+          @include breakpoint(full) {
+            font-size: 140%;
+          }
+          @include breakpoint(large) {
+            font-size: 120%;
+          }
+          @include breakpoint(medium) {
+            font-size: 100%;
+            text-align: center;
+          }
+
+          .contact-us-phone-number {
+            color: #ffffff;
+            font-weight: 400;
+
+            @include breakpoint(large) {
+              margin-left: 10px;
+              float: right;
+            }
+            @include breakpoint(medium) {
+              float: none;
+              margin-left: 0px;
+            }
+          }
+        }
+
+        .contact-us-email {
+          background: url('../images/arrow-right.png') no-repeat right;
+          padding-right: 10%;
+          margin-top: 20px;
+
+          .contact-us-email-button {
+            font-size: 160%;
+            color: #ffffff;
+            border-color: #dddddd;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+
+            @include breakpoint(full) {
+              font-size: 160%;
+            }
+            @include breakpoint(large) {
+              font-size: 140%;
+            }
+            @include breakpoint(medium) {
+              font-size: 120%;
+            }
+            @include breakpoint(tablet) {
+              font-size: 100%;
+            }
+
+            &:before {
+              border-top: 1px solid #dddddd;
+              content:"";
+              margin: 0 auto;
+              position: absolute;
+              top: 30px;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              width: 90%;
+              z-index: -1;
+
+
+              @include breakpoint(tablet) {
+                top: 25px;
+              }
+            }
+
+            span {
+              background: $blue;
+              padding: 0 20px;
+
+              .child-campus &{
+                background:$child_blue;
+              }
+
+            }
+          }
+        }
+      }
+
+      .get-directions {
+        display: block;
+        position: relative;
+        height: 200px;
+
+        @include breakpoint(medium) {
+          height: 300px;
+        }
+        @include breakpoint(tablet) {
+           height: 200px;
+         }
+
+        &:before, &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: 1000px;
+
+          @include breakpoint(medium) {
+            left: 15px;
+          }
+          @include breakpoint(tablet) {
+            left: 0;
+          }
+        }
+
+        &:before {
+          background: url('../images/hh-map.png') no-repeat 0 0;
+          z-index: 1;
+          background-size: cover;
+        }
+
+        &:after {
+          background: $blue;
+          opacity: 0.4;
+          z-index: 2;
+        }
+
+        .get-directions-link {
+          font-size: 190%;
+          letter-spacing: 3px;
+          color: #ffffff;
+          border-color: #ffffff;
+          display: block;
+          height: 160px;
+          margin: 60px auto;
+          float: right;
+          position:relative;
+          z-index: 3;
+
+          @include breakpoint(full) {
+            font-size: 190%;
+          }
+          @include breakpoint(large) {
+            font-size: 170%;
+          }
+          @include breakpoint(medium) {
+            font-size: 150%;
+            letter-spacing: 1px;
+            height: 100px;
+            margin: 90px auto;
+
+            img {
+              width: 100px;
+            }
+          }
+          @include breakpoint(tablet) {
+            font-size: 150%;
+            letter-spacing: 1px;
+            height: 200px;
+            margin: 0;
+            padding: 30px 0;
+            float: none;
+            text-align: center;
+
+            img {
+              width: 140px;
+            }
+          }
+        }
+      }
+
+      .css-arrow-right {
+        width: 0;
+        height: 0;
+        border-top: 70px solid transparent;
+        border-bottom: 70px solid transparent;
+        border-left: 25px solid $blue;
+        z-index: 10;
+        position: absolute;
+        top: 70px;
+        left: 41.66667%;
+        margin-left: 15px;
+        display: block;
+        @include breakpoint(small) {
+          display: none;
+        }
+      }
+
+      .css-arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 40px solid red;
+        z-index: 10;
+        position: absolute;
+        display: none;
+        @include breakpoint(small) {
+          display: none;
+        }
+      }
 
       .child-campus &{
         background:$child_blue;
@@ -67,7 +291,7 @@
     .get-started{
       //background:red;
       background: url('../../assets/images/pattern-one.png') repeat 0 0;
-      padding:40px 0;
+      padding:30px 0;
 
       .child-campus &{
         background: url('../../assets/images/pattern-two.png') repeat 0 0;
@@ -192,6 +416,13 @@
         left: auto;
         opacity: 1;
       }
+    }
+  }
+
+  .hippa {
+    max-width:115px;
+    a{
+      margin:-20px 0 0 0;
     }
   }
 

@@ -59,6 +59,8 @@ var build_state = 'prod',
     watched_js_files = [
         'assets/js/includes/**/*.js',
         'assets/js/*.js',
+        '!assets/js/javascript.min.js',
+        '!assets/js/bootstrap.min.js',
     ];
 
 module.exports = function(grunt) {

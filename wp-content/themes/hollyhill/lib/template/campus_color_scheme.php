@@ -24,7 +24,9 @@ function get_campus_color_scheme($post_id){
 add_filter( 'body_class','hh_color_scheme_class' );
 function hh_color_scheme_class( $classes ) {
     global $post;
-    //var_dump($post->ID);
-    $classes[] = get_post_meta($post->ID, '_hh_color_scheme', true);;
+    //var_dump(is_search());
+    if(!is_search()) {
+        $classes[] = get_post_meta($post->ID, '_hh_color_scheme', true);
+    }
     return $classes;
 }

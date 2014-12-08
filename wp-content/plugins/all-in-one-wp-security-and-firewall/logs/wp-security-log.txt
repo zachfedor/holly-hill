@@ -6,4 +6,9 @@
 =======
 [12/03/2014 8:32 PM] - FAILURE : Error inserting record into xdkstf_aiowps_login_activity
 [12/03/2014 8:32 PM] - FAILURE : Error inserting record into xdkstf_aiowps_login_activity
+<<<<<<< HEAD
 >>>>>>> 22fe47fbe6f46c84f4a55f08fd471e286a9c6e51
+=======
+[12/04/2014 4:49 PM] - FAILURE : Error inserting record into xdkstf_aiowps_login_activity
+[12/04/2014 4:56 PM] - FAILURE : Error inserting record into xdkstf_aiowps_login_activity
+>>>>>>> 0347c2d8813fccb4f80de4fa269a7193533b4de1

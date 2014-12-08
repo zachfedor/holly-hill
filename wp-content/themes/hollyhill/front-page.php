@@ -42,17 +42,17 @@ function hh_homepage_intro(){
 
     global $hh_theme_options;
     echo '<div class="row homepage-intro">';
-    echo '<div class="col-sm-8">';
+    echo '<div class="col-sm-6">';
     echo '<h2><em>'. $hh_theme_options['homepage_intro_headline'] .'</em></h2>';
     echo '<div class="intro">';
     echo $hh_theme_options['homepage_intro_content'];
     echo '</div>';
-    echo '<a class="hh-btn" href="#">Learn More</a>';
+    echo '<a class="hh-btn" href="'. $hh_theme_options['homepage_intro_content'] .'">Learn More</a>';
     echo '</div>';
-    echo '<div class="col-sm-4">';
+    echo '<div class="col-sm-6">';
     $attachment_id = $hh_theme_options['homepage_intro_image']['id'];
     //$attachment_src = wp_get_attachment_image_src($attachment_id, 'medium', false);
-    if($attachment_src = wp_get_attachment_image_src($attachment_id, 'medium', false)){
+    if($attachment_src = wp_get_attachment_image_src($attachment_id, 'large', false)){
         echo '<img src="'. $attachment_src[0] .'" />';
     }
     echo '</div>';
@@ -62,29 +62,27 @@ function hh_homepage_intro(){
 add_action('genesis_before_footer', 'hh_homepage_programs');
 function hh_homepage_programs(){
     ?>
-    <div class="row program-icons">
+    <div class="program-icons">
         <div class="container">
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-mental-health">ICON 1</div>
-            <a href="#" class="program-btn">Mental Health</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-geriatrics">ICON 2</div>
-            <a href="#" class="program-btn">Geriatrics</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-substance-abuse">ICON 3</div>
-            <a href="#" class="program-btn">Substance Abuse</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-outpatient">ICON 4</div>
-            <a href="#" class="program-btn">Outpatient</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-all-programs">ICON 5</div>
-            <a href="#" class="program-btn">All Programs</a>
-        </div>
+            <div class="row">
+                <h3>We Have Adult Treatment Programs For:</h3>
+                <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                    <a href="#" class="program-btn">Mental Health</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                    <a href="#" class="program-btn">Geriatrics</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                    <a href="#" class="program-btn">Substance Abuse</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                    <a href="#" class="program-btn">Outpatient</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                    <a href="#" class="program-btn">All Programs</a>
+                </div>
             </div>
+        </div>
     </div>
 <?php
 }

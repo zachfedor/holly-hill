@@ -16,25 +16,7 @@ function hh_child_campus_home_layout( $opt ) {
 // Remove the latest posts loop
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 
-remove_action('genesis_after_header', 'genesis_do_nav');
-add_action('genesis_after_header', 'hh_child_campus_do_nav');
 
-function hh_child_campus_do_nav(){
-
-    $class = 'menu genesis-nav-menu menu-primary container';
-
-    wp_nav_menu( array(
-            'menu'              => 'child-navigation',
-            'theme_location'    => 'child-campus-navigation',
-            'depth'             => 2,
-            'container'         => 'div',
-            'container_class'   => 'nav-primary',
-            'container_id'      => 'nav',
-            'menu_id'           => 'menu-primary-navigation',
-            'menu_class'        => $class,
-        )
-    );
-}
 
 function hh_child_campus_do_nav123() {
 
@@ -86,16 +68,17 @@ function hh_homepage_intro(){
 
     global $hh_theme_options;
     echo '<div class="row homepage-intro">';
-    echo '<div class="col-sm-8">';
-    echo '<h2>'. $hh_theme_options['homepage_intro_headline'] .'</h2>';
+    echo '<div class="col-sm-6">';
+    echo '<h2>'. $hh_theme_options['child_campus_homepage_intro_headline'] .'</h2>';
     echo '<div class="intro">';
-    echo $hh_theme_options['homepage_intro_content'];
+    echo $hh_theme_options['child_campus_homepage_intro_content'];
     echo '</div>';
+    echo '<a class="hh-btn" href="#">Learn More</a>';
     echo '</div>';
-    echo '<div class="col-sm-4">';
-    $attachment_id = $hh_theme_options['homepage_intro_image']['id'];
+    echo '<div class="col-sm-6">';
+    $attachment_id = $hh_theme_options['child_campus_homepage_intro_image']['id'];
     //$attachment_src = wp_get_attachment_image_src($attachment_id, 'medium', false);
-    if($attachment_src = wp_get_attachment_image_src($attachment_id, 'medium', false)){
+    if($attachment_src = wp_get_attachment_image_src($attachment_id, 'large', false)){
         echo '<img src="'. $attachment_src[0] .'" />';
     }
     echo '</div>';
@@ -103,29 +86,22 @@ function hh_homepage_intro(){
 }
 
 add_action('genesis_before_footer', 'hh_homepage_programs');
-function hh_homepage_programs(){
-    ?>
-    <div class="row program-icons">
+function hh_homepage_programs(){ ?>
+    <div class="program-icons">
         <div class="container">
-            <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-                <div class="icon-mental-health">ICON 1</div>
-                <a href="#" class="program-btn">Mental Health</a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-                <div class="icon-geriatrics">ICON 2</div>
-                <a href="#" class="program-btn">Geriatrics</a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-                <div class="icon-substance-abuse">ICON 3</div>
-                <a href="#" class="program-btn">Substance Abuse</a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-                <div class="icon-outpatient">ICON 4</div>
-                <a href="#" class="program-btn">Outpatient</a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-                <div class="icon-all-programs">ICON 5</div>
-                <a href="#" class="program-btn">All Programs</a>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <a href="#" class="program-btn">Explore,<br /> Discover,<br /> Connect</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <a href="#" class="program-btn">Family<br />Involvement</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <a href="#" class="program-btn">Frequently<br />Asked<br />Questions</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <a href="#" class="program-btn">Visiting Hours<br />& Phone Times</a>
+                </div>
             </div>
         </div>
     </div>

@@ -6,7 +6,7 @@ $percentage:		.6527778; // Useful for fixed width sites, as well as for limiting
 
 @mixin breakpoint($point) {
   @if $point == full {
-    @media (min-width: 1300px) { @content; }
+    @media (min-width: 1200px) { @content; }
   }
   @else if $point == large {
     @media (max-width: 1200px) { @content; }
@@ -86,3 +86,4 @@ $LatoLight: 'LatoLight', "HelveticaNeue-Light", "Helvetica Neue Light", "Helveti
 $LatoSemiBold: 'LatoSemiBold', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $BemboSemiBold: 'BemboSemiBold', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $BemboSemiBoldItalic: 'BemboSemiBoldItalic', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$BemboBoldItalic: 'BemboBoldItalic', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
