@@ -2,6 +2,10 @@
 
 //* Template Name: Child Campus Home
 
+//var_dump(get_the_id());
+//var_dump(get_child_campus_id());
+get_campus_color_scheme(get_the_id());
+
 // Set the page layout to full-width
 add_filter( 'genesis_pre_get_option_site_layout', 'hh_child_campus_home_layout' );
 function hh_child_campus_home_layout( $opt ) {
@@ -11,6 +15,46 @@ function hh_child_campus_home_layout( $opt ) {
 
 // Remove the latest posts loop
 remove_action( 'genesis_loop', 'genesis_do_loop' );
+
+remove_action('genesis_after_header', 'genesis_do_nav');
+add_action('genesis_after_header', 'hh_child_campus_do_nav');
+
+function hh_child_campus_do_nav(){
+
+    $class = 'menu genesis-nav-menu menu-primary container';
+
+    wp_nav_menu( array(
+            'menu'              => 'child-navigation',
+            'theme_location'    => 'child-campus-navigation',
+            'depth'             => 2,
+            'container'         => 'div',
+            'container_class'   => 'nav-primary',
+            'container_id'      => 'nav',
+            'menu_id'           => 'menu-primary-navigation',
+            'menu_class'        => $class,
+        )
+    );
+}
+
+function hh_child_campus_do_nav123() {
+
+    //* Do nothing if menu not supported
+    if ( ! genesis_nav_menu_supported( 'primary' ) )
+        //var_dump('!!! NOPE !!!');
+        return;
+
+    $class = 'menu genesis-nav-menu menu-primary';
+    if ( genesis_superfish_enabled() ) {
+        $class .= ' js-superfish';
+    }
+
+    genesis_nav_menu( array(
+        'theme_location' => 'primary',
+        'menu_class'     => $class,
+    ) );
+
+}
+
 
 // Featured Area
 register_new_royalslider_files(3);
@@ -58,29 +102,31 @@ function hh_homepage_intro(){
     echo '</div>';
 }
 
-add_action('genesis_after_content', 'hh_homepage_programs');
+add_action('genesis_before_footer', 'hh_homepage_programs');
 function hh_homepage_programs(){
     ?>
     <div class="row program-icons">
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-mental-health">ICON 1</div>
-            <a href="#" class="program-btn">Mental Health</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-geriatrics">ICON 2</div>
-            <a href="#" class="program-btn">Geriatrics</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-substance-abuse">ICON 3</div>
-            <a href="#" class="program-btn">Substance Abuse</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-outpatient">ICON 4</div>
-            <a href="#" class="program-btn">Outpatient</a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-            <div class="icon-all-programs">ICON 5</div>
-            <a href="#" class="program-btn">All Programs</a>
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                <div class="icon-mental-health">ICON 1</div>
+                <a href="#" class="program-btn">Mental Health</a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                <div class="icon-geriatrics">ICON 2</div>
+                <a href="#" class="program-btn">Geriatrics</a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                <div class="icon-substance-abuse">ICON 3</div>
+                <a href="#" class="program-btn">Substance Abuse</a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                <div class="icon-outpatient">ICON 4</div>
+                <a href="#" class="program-btn">Outpatient</a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 program-col">
+                <div class="icon-all-programs">ICON 5</div>
+                <a href="#" class="program-btn">All Programs</a>
+            </div>
         </div>
     </div>
 <?php

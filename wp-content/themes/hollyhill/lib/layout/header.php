@@ -34,10 +34,25 @@ function hh_header(){
     </div>
     <div class="container">
         <div class="tagline1 tagline col-sm-4">
-            <strong><em>Patient focused.</em></strong> <?php //make theme option variable ?>
+            <?php
+
+            if(get_campus_color_scheme(get_the_ID()) == 'adult-campus' || is_front_page()){
+                $tagline1 = 'Patient focused.';
+            } else {
+                $tagline1 = 'Growing Together..';
+            }
+
+            if(get_campus_color_scheme(get_the_ID()) == 'adult-campus' || is_front_page()){
+                $tagline2 = 'Passion driven.';
+            } else {
+                $tagline2 = '..For The Future';
+            }
+
+            ?>
+            <strong><em><?php echo $tagline1; ?></em></strong> <?php //make theme option variable ?>
         </div>
         <div class="tagline2 tagline col-sm-4">
-            <strong><em>Passion driven.</strong></em> <?php //make theme option variable ?>
+            <strong><em><?php echo $tagline2; ?></strong></em> <?php //make theme option variable ?>
         </div>
     </div>
 <?php
