@@ -48,14 +48,17 @@ function hh_landing_page_header(){
                 <h2 class="site-description"><?php echo get_bloginfo('description'); ?></h2> <?php //make theme option variable ?>
             </a>
             <div class="row">
-                <div class="phone col-xs-2 col-sm-3">
+                <div class="tagline tagline1 col-sm-4">
                     Patient focused. <?php //make theme option variable ?>
                 </div>
-                <div class="call-us col-xs-3 col-sm-5">
+                <div class="tagline tagline2 col-sm-4">
                     Passion driven. <?php //make theme option variable ?>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="landing-background">
+        <img src="http://localhost/hollyhill/wp-content/uploads/2014/12/Holly-Hill-1.jpg" />
     </div>
 <?php
 

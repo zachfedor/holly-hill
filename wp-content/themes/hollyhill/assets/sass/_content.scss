@@ -5,15 +5,15 @@
 .entry-title {
 	overflow: hidden;
 	word-break: break-word;
+    color: $blue;
+    @include font-size(32);
+    font-family: $BemboSemiBoldItalic;
+    margin:0;
+    padding:0 0 10px;
 
-  color: $blue;
-  @include font-size(32);
-  font-family: $BemboSemiBoldItalic;
-  margin:0;
-  padding:0 0 10px;
-  .child-campus &{
-    color: $child_blue;
-  }
+    .child-campus &{
+      color: $child_blue;
+    }
 
 	a {
 		color: inherit;

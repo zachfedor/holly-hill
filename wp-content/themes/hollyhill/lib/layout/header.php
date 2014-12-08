@@ -40,13 +40,13 @@ function hh_header(){
             if(get_campus_color_scheme(get_the_ID()) == 'adult-campus' || is_front_page()){
                 $tagline1 = 'Patient focused.';
             } else {
-                $tagline1 = 'Growing Together..';
+                $tagline1 = 'Growing Together.';
             }
 
             if(get_campus_color_scheme(get_the_ID()) == 'adult-campus' || is_front_page()){
                 $tagline2 = 'Passion driven.';
             } else {
-                $tagline2 = '..For The Future';
+                $tagline2 = 'For The Future.';
             }
 
             ?>
