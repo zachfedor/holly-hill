@@ -48,20 +48,41 @@ function hh_landing_page_header(){
                 <h2 class="site-description"><?php echo get_bloginfo('description'); ?></h2> <?php //make theme option variable ?>
             </a>
             <div class="row">
-                <div class="tagline tagline1 col-sm-4">
+                <div class="landing-tagline tagline1 col-xs-4">
                     Patient focused. <?php //make theme option variable ?>
                 </div>
-                <div class="tagline tagline2 col-sm-4">
+                <div class="landing-tagline tagline2 col-xs-4">
                     Passion driven. <?php //make theme option variable ?>
                 </div>
             </div>
         </div>
     </div>
-    <div class="landing-background">
-        <img src="http://localhost/hollyhill/wp-content/uploads/2014/12/Holly-Hill-1.jpg" />
-    </div>
+    <div class="landing-top"></div>
 <?php
 
 }
+
+add_action( 'genesis_before_footer', 'hh_landing_page_bottom' ) ;
+function hh_landing_page_bottom(){ ?>
+    <div class="landing-arrow"></div>
+    <div class="landing-bottom">
+
+        <div class="container">
+            <div class="row">
+                <div class="button-group col-sm-3 col-sm-offset-3">
+                    <h4>Children's<br />Campus</h4>
+                    <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/landing-page-child-thumb.jpg" />
+                    <a class="landing-continue" href="#">Continue <span class="icon"></span></a>
+                </div>
+                <div class="button-group col-sm-3">
+                    <h4>Adult<br />Campus</h4>
+                    <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/landing-page-adult-thumb.jpg" />
+                    <a class="landing-continue" href="#">Continue <span class="icon"></span></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<?php }
 
 genesis();
