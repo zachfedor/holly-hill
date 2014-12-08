@@ -71,13 +71,13 @@ function hh_footer_bottom(){ ?>
                 </div>
                 <div class="col-sm-6">
                     <div class="campus col-sm-6">
-                        Adult Campus<br />
+                        <strong>Adult Campus</strong><br />
                         919.250.7000<br />
                         3019 Falstaff Road<br />
                         Raleigh, NC 27610
                     </div>
                     <div class="campus col-sm-6">
-                        Childern’s Campus<br />
+                        <strong>Childern’s Campus</strong><br />
                         919.250.7000<br />
                         201 Michael J Smith Lane<br />
                         Raleigh, NC 27610
@@ -96,13 +96,13 @@ function hh_landing_page_footer(){ ?>
                 <div class="footer-logo col-sm-2"></div>
                 <div class="footer-navigation pull-left col-sm-5">
                     <div class="campus col-sm-6">
-                        Adult Campus<br />
+                        <strong>Adult Campus</strong><br />
                         919.250.7000<br />
                         3019 Falstaff Road<br />
                         Raleigh, NC 27610
                     </div>
                     <div class="campus col-sm-6">
-                        Childern’s Campus<br />
+                        <strong>Childern’s Campus</strong><br />
                         919.250.7000<br />
                         201 Michael J Smith Lane<br />
                         Raleigh, NC 27610
