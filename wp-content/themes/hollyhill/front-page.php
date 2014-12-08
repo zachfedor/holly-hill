@@ -45,14 +45,14 @@ function hh_homepage_intro(){
 
     global $hh_theme_options;
     echo '<div class="row homepage-intro">';
-    echo '<div class="col-sm-6">';
+    echo '<div class="col-sm-6 intro-content">';
     echo '<h2><em>'. $hh_theme_options['homepage_intro_headline'] .'</em></h2>';
     echo '<div class="intro">';
     echo $hh_theme_options['homepage_intro_content'];
     echo '</div>';
-    echo '<a class="hh-btn" href="'. $hh_theme_options['homepage_intro_content'] .'">Learn More</a>';
+    echo '<a class="hh-btn green" href="'. $hh_theme_options['homepage_intro_content'] .'">Learn More</a>';
     echo '</div>';
-    echo '<div class="col-sm-6">';
+    echo '<div class="col-sm-6 intro-image hidden-sm hidden-xs">';
     $attachment_id = $hh_theme_options['homepage_intro_image']['id'];
     //$attachment_src = wp_get_attachment_image_src($attachment_id, 'medium', false);
     if($attachment_src = wp_get_attachment_image_src($attachment_id, 'large', false)){
