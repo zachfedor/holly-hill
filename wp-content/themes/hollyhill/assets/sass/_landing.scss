@@ -83,16 +83,21 @@
     position:relative;
     z-index:0;
     min-height:400px;
+    padding:80px 0 0 0;
     width:100%;
 
+    .child-button{
+      border-right:2px solid $blue;
+    }
     .button-group{
+
       h4{
         text-align:center;
         font-family: $LatoRegular;
         @include font-size(22);
         color:$blue;
         text-transform: uppercase;
-        margin:40px 0 20px 0;
+        margin:-10px 0 20px 0;
       }
       img{
         display:block;

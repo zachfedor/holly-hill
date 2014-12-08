@@ -2939,9 +2939,14 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   position: relative;
   z-index: 0;
   min-height: 400px;
+  padding: 80px 0 0 0;
   width: 100%;
 }
 /* line 89, ../sass/_landing.scss */
+.landing-page .landing-bottom .child-button {
+  border-right: 2px solid #2A367A;
+}
+/* line 94, ../sass/_landing.scss */
 .landing-page .landing-bottom .button-group h4 {
   text-align: center;
   font-family: "LatoRegular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -2949,14 +2954,14 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   font-size: 2.2rem;
   color: #2A367A;
   text-transform: uppercase;
-  margin: 40px 0 20px 0;
+  margin: -10px 0 20px 0;
 }
-/* line 97, ../sass/_landing.scss */
+/* line 102, ../sass/_landing.scss */
 .landing-page .landing-bottom .button-group img {
   display: block;
   margin: 0 auto;
 }
-/* line 103, ../sass/_landing.scss */
+/* line 108, ../sass/_landing.scss */
 .landing-page .landing-bottom .button-group .landing-continue {
   display: block;
   width: 100%;
@@ -2973,7 +2978,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   position: relative;
 }
 @media (max-width: 992px) {
-  /* line 103, ../sass/_landing.scss */
+  /* line 108, ../sass/_landing.scss */
   .landing-page .landing-bottom .button-group .landing-continue {
     font-size: 16px;
     font-size: 1.6rem;
@@ -2981,13 +2986,13 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   }
 }
 @media (max-width: 767px) {
-  /* line 103, ../sass/_landing.scss */
+  /* line 108, ../sass/_landing.scss */
   .landing-page .landing-bottom .button-group .landing-continue {
     font-size: 19px;
     font-size: 1.9rem;
   }
 }
-/* line 127, ../sass/_landing.scss */
+/* line 132, ../sass/_landing.scss */
 .landing-page .landing-bottom .button-group .landing-continue span {
   display: block;
   height: 46px;
@@ -2998,11 +3003,11 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   right: 0;
   top: 0;
 }
-/* line 139, ../sass/_landing.scss */
+/* line 144, ../sass/_landing.scss */
 .landing-page .landing-bottom .button-group .landing-continue:hover {
   text-decoration: none;
 }
-/* line 147, ../sass/_landing.scss */
+/* line 152, ../sass/_landing.scss */
 .landing-page .landing-arrow {
   background: url("../../assets/images/landing-page-arrow.png") no-repeat center bottom;
   position: relative;
@@ -3011,11 +3016,11 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   width: 100%;
   margin: 0 0 -80px;
 }
-/* line 156, ../sass/_landing.scss */
+/* line 161, ../sass/_landing.scss */
 .landing-page .content .entry-content {
   text-align: center;
 }
-/* line 158, ../sass/_landing.scss */
+/* line 163, ../sass/_landing.scss */
 .landing-page .content .entry-content h2 {
   font-family: "LatoHeavy", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 25px;
@@ -3024,7 +3029,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   text-transform: uppercase;
   margin: 0 0 30px 0;
 }
-/* line 164, ../sass/_landing.scss */
+/* line 169, ../sass/_landing.scss */
 .child-campus .landing-page .content .entry-content h2 {
   color: #21598E;
 }
