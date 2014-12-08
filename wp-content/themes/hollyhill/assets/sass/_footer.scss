@@ -139,6 +139,15 @@
             text-align: center;
             margin: 0;
 
+            &:hover {
+              color: $green;
+              border-color: $green;
+
+              &:before {
+                border-color: $green;
+              }
+            }
+
             @include breakpoint(full) {
               font-size: 160%;
             }
@@ -163,7 +172,7 @@
               bottom: 0;
               width: 90%;
               z-index: -1;
-
+              transition: all 0.1s ease-in-out;
 
               @include breakpoint(medium) {
                 top: 25px;
@@ -201,10 +210,27 @@
         &:before, &:after {
           content: "";
           position: absolute;
-          top: 0;
+          top: -1px;
           bottom: 0;
           left: 0;
-          width: 1000px;
+          width: 1500px;
+
+          @include breakpoint(full) {
+            width: 1500px;
+          }
+          @include breakpoint(large) {
+            width: 1000px;
+          }
+          @include breakpoint(medium) {
+            width: 800px;
+          }
+          @include breakpoint(tablet) {
+            width: 800px;
+            top: 0;
+          }
+          @include breakpoint(xsmall) {
+            width: 600px;
+          }
         }
 
         &:before {
@@ -223,13 +249,17 @@
           font-size: 190%;
           letter-spacing: 3px;
           color: #ffffff;
-          border-color: #ffffff;
           display: block;
           height: 160px;
           margin: 70px auto;
           float: right;
           position:relative;
           z-index: 3;
+          
+          &:hover {
+            color: $blue;
+            text-decoration: none;
+          }
 
           @include breakpoint(full) {
             font-size: 190%;
