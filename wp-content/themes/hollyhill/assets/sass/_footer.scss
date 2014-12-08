@@ -31,15 +31,10 @@
   color:#fff !important;
   overflow:hidden;
 
-  .row{
-    margin-left:0;
-    margin-right:0;
-  }
-
   .footer-logo{
     background: url('../../assets/images/logo.png') no-repeat center center;
     z-index:100;
-    margin:-10px 0 0;
+    margin:-17px 0 0;
     width:115px;
     height:115px;
     background-size: 115px 115px;
@@ -51,11 +46,109 @@
   }
 
   .pre-footer{
+    overflow-x: hidden;
 
     .contact-us{
-      min-height:300px;
+      min-height: 280px;
       background:$blue;
-      border-bottom:20px solid $green;
+      letter-spacing: 2px;
+
+      .contact-us-links {
+        padding-right: 55px;
+        margin-top: 75px;
+
+        .contact-us-phone {
+          color: #ffffff;
+          font-size: 140%;
+          font-weight: 100;
+
+          .contact-us-phone-number {
+            color: #ffffff;
+            font-weight: 400;
+            margin-left: 10px;
+            float: right;
+          }
+        }
+
+        .contact-us-email {
+          background: url('../images/arrow-right.png') no-repeat right;
+          padding-right: 10%;
+          margin-top: 20px;
+
+          .contact-us-email-button {
+            font-size: 160%;
+            color: #ffffff;
+            border-color: #dddddd;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+
+            &:before {
+              border-top: 1px solid #dddddd;
+              content:"";
+              margin: 0 auto;
+              position: absolute;
+              top: 30px;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              width: 90%;
+              z-index: -1;
+            }
+
+            span {
+              background: $blue;
+              padding: 0 20px;
+
+              .child-campus &{
+                background:$child_blue;
+              }
+
+            }
+          }
+        }
+      }
+
+      .get-directions {
+        padding-left: 55px;
+        display: block;
+        position: relative;
+
+        &:before, &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 1000px;
+        }
+
+        &:before {
+          background: url('../images/hh-map.png') no-repeat 0 0;
+          z-index: 1;
+          background-size: cover;
+        }
+
+        &:after {
+          background: $blue;
+          opacity: 0.4;
+          z-index: 2;
+        }
+
+        .get-directions-link {
+          font-size: 190%;
+          letter-spacing: 3px;
+          color: #ffffff;
+          border-color: #ffffff;
+          display: block;
+          height: 160px;
+          margin: 60px auto;
+          float: right;
+          position:relative;
+          z-index: 3;
+        }
+      }
 
       .child-campus &{
         background:$child_blue;

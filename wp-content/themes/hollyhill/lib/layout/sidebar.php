@@ -31,6 +31,49 @@ function child_do_sidebar() {
 }}
 
 add_action('genesis_before_sidebar_widget_area', 'hh_page_children_nav');
-function hh_page_children_nav(){ ?>
+function hh_page_children_nav()
+{
+    if (!is_search()) {
+        ?>
+        <section class="page-navigation widget">
+            <?php
+            global $post;
+            $page_id = $post->ID;
+            $page_ancestor = get_post_ancestors($page_id);
+            if (count($page_ancestor) > 0) {
+                //var_dump($page_ancestor);
+                $page_ancestor = array_pop($page_ancestor);
+            } else {
+                $page_ancestor = $page_id;
+            }
+            echo '<h3>' . get_the_title($page_ancestor) . '</h3>';
 
-<?php }
+            $args = array(
+                'authors' => '',
+                'child_of' => $page_ancestor,
+                'date_format' => get_option('date_format'),
+                'depth' => 1,
+                'echo' => 1,
+                'exclude' => '',
+                'include' => '',
+                'link_after' => '',
+                'link_before' => '',
+                'post_type' => 'page',
+                'post_status' => 'publish',
+                'show_date' => '',
+                'sort_column' => 'menu_order, post_title',
+                'sort_order' => '',
+                'title_li' => '',
+                'walker' => ''
+            );
+
+            echo '<ul>';
+            wp_list_pages($args);
+            echo '</ul>';
+
+            ?>
+        </section>
+    <?php
+    }
+
+}

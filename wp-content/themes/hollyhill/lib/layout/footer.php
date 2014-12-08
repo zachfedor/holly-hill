@@ -13,20 +13,28 @@ remove_action( 'genesis_footer', 'genesis_do_footer' );
 
 add_action( 'genesis_footer', 'hh_pre_footer' ) ;
 function hh_pre_footer(){ ?>
-    <div class="pre-footer fluid-container">
-        <div class="contact-us row">
+    <div class="pre-footer">
+        <div class="contact-us">
             <div class="container">
-                <div class="email-us col-sm-5">EMAIL US</div>
-                <div class="get-directions col-sm-7">GET DIRECTIONS</div>
-            </div>
-        </div>
-        <div class="get-started  row">
-            <div class="container">
-                <div class="col-sm-8 col-md-9"><h3>Looking for information for yourself or a family member?</h3></div>
-                <div class="col-sm-4 col-md-3 cta-button"><a href="#" class="hh-btn">Get&nbsp;Started</a></div>
-            </div>
-        </div>
-    </div>
+                <div class="row">
+                    <div class="contact-us-links col-sm-5">
+                        <div class="contact-us-phone">
+                            CALL US NOW AT: <span class="contact-us-phone-number">1.800.447.1800</span>
+                        </div>
+                        <div class="contact-us-email">
+                            <a href="" class="contact-us-email-button hh-btn" ><span>EMAIL US NOW</span></a>
+                        </div>
+                    </div>
+                    <div class="get-directions col-sm-7">
+                        <a href="" class="get-directions-link" >
+                            <img src="wp-content/themes/hollyhill/assets/images/icon-map.png" alt="Map" />
+                            <span>GET DIRECTIONS NOW</span>
+                        </a>
+                    </div>
+                </div> <!-- div.row -->
+            </div> <!-- div.container -->
+        </div> <!-- div.contact-us -->
+    </div> <!-- div.pre-footer -->
 <?php }
 
 add_action( 'genesis_footer', 'hh_footer' ) ;
