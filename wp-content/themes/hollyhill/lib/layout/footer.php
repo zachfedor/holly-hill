@@ -31,6 +31,8 @@ function hh_pre_footer(){ ?>
                             <span>GET DIRECTIONS NOW</span>
                         </a>
                     </div>
+                    <div class="css-arrow-right"></div>
+                    <div class="css-arrow-down"></div>
                 </div> <!-- div.row -->
             </div> <!-- div.container -->
         </div> <!-- div.contact-us -->

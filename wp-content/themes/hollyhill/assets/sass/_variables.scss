@@ -6,7 +6,7 @@ $percentage:		.6527778; // Useful for fixed width sites, as well as for limiting
 
 @mixin breakpoint($point) {
   @if $point == full {
-    @media (min-width: 1300px) { @content; }
+    @media (min-width: 1200px) { @content; }
   }
   @else if $point == large {
     @media (max-width: 1200px) { @content; }
