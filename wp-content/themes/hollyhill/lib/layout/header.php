@@ -15,6 +15,7 @@ add_action( 'genesis_header', 'hh_header' ) ;
 function hh_header(){
     global $template;
     //echo $template;
+
 ?>
     <div class="ribbon">
         <div class="container">
