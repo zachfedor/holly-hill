@@ -6,6 +6,9 @@
     .container{
       bottom: 0;
       position: absolute;
+      @include breakpoint(small) {
+        width:100%;
+      }
     }
     .slide-block{
       background: none repeat scroll 0 0 $blue;
@@ -14,6 +17,10 @@
       right: 0;
       width: 40%;
       padding: 30px;
+
+      @include breakpoint(small) {
+        width:100%;
+      }
 
       .child-campus &{
         background: none repeat scroll 0 0 $child_blue;
@@ -70,6 +77,7 @@
     }
 
   }
+
   .hh-btn{
     @include font-size(18);
     float:left;
@@ -99,14 +107,59 @@
 
   .program-col{
     width:20%;
+    display:table;
+    a{
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .child-campus & {
+      width:25%;
+    }
 
     @include breakpoint(small){
       width:100%;
       float:left;
+      margin:0 0 20px 0;
     }
   }
 
-  .icon{
+
+
+  .program-btn{
+    display:block;
+    text-align:left;
+    border: 0px;
+    background: url('../../assets/images/icon-arrow-blue-right.png') 90% center no-repeat $blue;
+    background-size:15px 40px;
+    padding:25px 15px;
+    color:#fff;
+    min-height:100px;
+    @include font-size(15);
+    text-transform: uppercase;
+    font-family: $LatoLight;
+
+    .child-campus &{
+      background-color: $child_blue;
+    }
+
+    @include breakpoint(medium) {
+      @include font-size(13);
+
+    }
+    @include breakpoint(small){
+      width:100%;
+    }
+
+    &:hover{
+      color:$green;
+      border-color: $green;
+      text-decoration: none;
+    }
+  }
+
+    /*
+    .icon{
     display:inline-block;
   }
 
@@ -151,20 +204,6 @@
     margin: 0 auto;
   }
 
-  .program-btn{
-    display:block;
-    text-align:left;
-    border: 0px;
-    background: url('../../assets/images/icon-arrow-blue-right.png') 90% 0 no-repeat $child_blue;
-    background-size:21px 91px;
-    padding:20px 15px;
-    color:#fff;
-    min-height:100px;
-    @include font-size(15);
-    text-transform: uppercase;
-    font-family: $LatoSemiBold;
-
-    /*
     display:block;
     background: transparent;
     border: 1px solid $blue;
@@ -176,23 +215,15 @@
     @include font-size(15);
     text-transform: uppercase;
     font-family: $LatoSemiBold;
-    */
+
     .child-campus &{
       //color: $child_blue;
       //border: 1px solid $child_blue;
 
     }
+    */
 
-    @include breakpoint(small){
-      width:100%;
-    }
 
-    &:hover{
-      color:$green;
-      border-color: $green;
-      text-decoration: none;
-    }
-  }
 
 }
 

@@ -13,6 +13,18 @@
     position:relative;
   }
 
+  .slicknav_menu {
+    display:none;
+    background:none;
+    .slicknav_btn {
+      float: left;
+      background:none;
+    }
+    @include breakpoint(tablet) {
+      display:block;
+    }
+  }
+
   .search-toggle{
     background: url('../../assets/images/icon-search.png') no-repeat center center;
     height:103px;
@@ -71,6 +83,11 @@
 	@extend %clearfix;
 	@extend %unstyled-list;
 	width: 100%;
+    padding:0 80px 0 0;
+
+    @include breakpoint(tablet) {
+      display:none;
+    }
 	
 	> .wrap {
 		padding-left: 0;
