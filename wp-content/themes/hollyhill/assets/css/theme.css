@@ -2805,8 +2805,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     float: left;
     margin: 0 0 20px 0;
   }
+  /* line 124, ../sass/_home.scss */
+  .child-campus .program-icons .program-col {
+    width: 100%;
+  }
 }
-/* line 129, ../sass/_home.scss */
+/* line 132, ../sass/_home.scss */
 .program-icons .program-btn {
   display: block;
   text-align: left;
@@ -2821,24 +2825,24 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   text-transform: uppercase;
   font-family: "LatoLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-/* line 142, ../sass/_home.scss */
+/* line 145, ../sass/_home.scss */
 .child-campus .program-icons .program-btn {
   background-color: #21598E;
 }
 @media (max-width: 992px) {
-  /* line 129, ../sass/_home.scss */
+  /* line 132, ../sass/_home.scss */
   .program-icons .program-btn {
     font-size: 13px;
     font-size: 1.3rem;
   }
 }
 @media (max-width: 767px) {
-  /* line 129, ../sass/_home.scss */
+  /* line 132, ../sass/_home.scss */
   .program-icons .program-btn {
     width: 100%;
   }
 }
-/* line 154, ../sass/_home.scss */
+/* line 157, ../sass/_home.scss */
 .program-icons .program-btn:hover {
   color: #6CA948;
   border-color: #6CA948;

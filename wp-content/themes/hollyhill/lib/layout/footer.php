@@ -27,7 +27,7 @@ function hh_pre_footer(){ ?>
                     </div>
                     <div class="get-directions col-sm-7">
                         <a href="" class="get-directions-link" >
-                            <img src="wp-content/themes/hollyhill/assets/images/icon-map.png" alt="Map" />
+                            <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/icon-map.png" alt="Map" />
                             <span>GET DIRECTIONS NOW</span>
                         </a>
                     </div>

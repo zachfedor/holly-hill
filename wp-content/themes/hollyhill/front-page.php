@@ -67,24 +67,27 @@ function hh_homepage_programs(){
     ?>
     <div class="program-icons">
         <div class="container">
+
             <div class="row">
                 <div class="col-sm-12">
                     <h3>We Have Adult Treatment Programs For:</h3>
                 </div>
+            </div>
+            <div class="row button-row">
                 <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-                    <a href="#" class="program-btn">Mental Health</a>
+                    <a href="<?php echo site_url('our-programs/mental-health'); ?>" class="program-btn">Mental Health</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-                    <a href="#" class="program-btn">Geriatrics</a>
+                    <a href="<?php echo site_url('our-programs/geriatrics'); ?>" class="program-btn">Geriatrics</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-                    <a href="#" class="program-btn">Substance Abuse</a>
+                    <a href="<?php echo site_url('our-programs/substance-abuse'); ?>" class="program-btn">Substance Abuse</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-                    <a href="#" class="program-btn">Outpatient</a>
+                    <a href="<?php echo site_url('adult-outpatient-php'); ?>" class="program-btn">Outpatient (PHP)</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-2 program-col">
-                    <a href="#" class="program-btn">All Programs</a>
+                    <a href="<?php echo site_url('our-programs'); ?>" class="program-btn">All Programs</a>
                 </div>
             </div>
         </div>

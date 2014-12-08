@@ -94,17 +94,22 @@ function hh_homepage_programs(){ ?>
     <div class="program-icons">
         <div class="container">
             <div class="row">
+                <div class="col-sm-12">
+                    <h3>Learn More About Treatment at Our Children's Campus:</h3>
+                </div>
+            </div>
+            <div class="row button-row">
                 <div class="col-xs-12 col-sm-6 col-md-3 program-col">
-                    <a href="#" class="program-btn">Explore,<br /> Discover,<br /> Connect</a>
+                    <a href="<?php echo site_url('child-adolescent-campus/our-programs/explore-discover-connect'); ?>" class="program-btn">Explore,<br /> Discover,<br /> Connect</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 program-col">
-                    <a href="#" class="program-btn">Family<br />Involvement</a>
+                    <a href="<?php echo site_url('child-adolescent-campus/our-programs/family-involvement'); ?>" class="program-btn">Family<br />Involvement</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 program-col">
-                    <a href="#" class="program-btn">Frequently<br />Asked<br />Questions</a>
+                    <a href="<?php echo site_url('child-adolescent-campus/our-programs/frequently-asked-questions'); ?>" class="program-btn">Frequently<br />Asked<br />Questions</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 program-col">
-                    <a href="#" class="program-btn">Visiting Hours<br />& Phone Times</a>
+                    <a href="<?php echo site_url('child-adolescent-campus/our-programs/visiting-hours-phone-times'); ?>" class="program-btn">Visiting Hours<br />& Phone Times</a>
                 </div>
             </div>
         </div>

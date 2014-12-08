@@ -8,6 +8,17 @@ jQuery(function($){
         allowParentLinks: true
     });
 
+
+    equalize_program_buttons();
+    $(window).on('resize', function(){
+        equalize_program_buttons();
+    });
+
+    function equalize_program_buttons(){
+        $('.program-icons').find('.button-row').equalize({reset: true});
+    }
+
+
 	//Add Hover effect to menus
 	jQuery('ul.nav li.dropdown').hover(function() {
 	  jQuery(this).find('.dropdown-menu').stop(true, true).delay(10).fadeIn();
