@@ -9,6 +9,9 @@ function hh_front_page_layout( $opt ) {
     return $opt;
 }
 
+
+
+
 // Remove the latest posts loop
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 
@@ -65,7 +68,9 @@ function hh_homepage_programs(){
     <div class="program-icons">
         <div class="container">
             <div class="row">
-                <h3>We Have Adult Treatment Programs For:</h3>
+                <div class="col-sm-12">
+                    <h3>We Have Adult Treatment Programs For:</h3>
+                </div>
                 <div class="col-xs-12 col-sm-6 col-md-2 program-col">
                     <a href="#" class="program-btn">Mental Health</a>
                 </div>

@@ -31,10 +31,18 @@ function create_homepage_slider_cpt(){
         'slug' => 'homepage-slider'
     ), $args);
 
+    $homepage_slider->register_taxonomy(array(
+        'taxonomy_name' => 'slider_campus',
+        'singular' => 'Campus',
+        'plural' => 'Campus',
+        'slug' => 'slider-campus'
+    ));
+
+
     $homepage_slider->columns(array(
         'cb' => '<input type="checkbox" />',
         'title' => __('Title'),
-        'lcm_issue' => __('Issue'),
+        'slider_campus' => __('Campus'),
         'date' => __('Date')
     ));
 
