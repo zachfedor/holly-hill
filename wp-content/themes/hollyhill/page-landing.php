@@ -72,12 +72,12 @@ function hh_landing_page_bottom(){ ?>
                 <div class="button-group col-sm-3 col-sm-offset-3 child-button">
                     <h4>Children's<br />Campus</h4>
                     <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/landing-page-child-thumb.jpg" />
-                    <a class="landing-continue" href="#">Continue <span class="icon"></span></a>
+                    <a class="landing-continue" href="<?php echo site_url('child-adolescent-campus'); ?>">Continue <span class="icon"></span></a>
                 </div>
                 <div class="button-group col-sm-3 adult-button">
                     <h4>Adult<br />Campus</h4>
                     <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/landing-page-adult-thumb.jpg" />
-                    <a class="landing-continue" href="#">Continue <span class="icon"></span></a>
+                    <a class="landing-continue" href="<?php echo site_url(''); ?>">Continue <span class="icon"></span></a>
                 </div>
             </div>
         </div>
