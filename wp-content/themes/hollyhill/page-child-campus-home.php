@@ -16,6 +16,10 @@ function hh_child_campus_home_layout( $opt ) {
 // Remove the latest posts loop
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 
+if(is_ancestor(get_child_campus_id()) || is_page(get_child_campus_id())) {
+    remove_action('genesis_after_header', 'genesis_do_nav');
+    add_action('genesis_after_header', 'hh_child_campus_do_nav');
+}
 
 
 function hh_child_campus_do_nav123() {
