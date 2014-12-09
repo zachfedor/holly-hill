@@ -25,3 +25,12 @@
 [12/08/2014 3:40 PM] - SUCCESS : Cronjob_Handler - Hourly cron handler got fired.
 [12/08/2014 3:42 PM] - SUCCESS : Cronjob_Handler - Hourly cron handler got fired.
 [12/08/2014 4:43 PM] - SUCCESS : Cronjob_Handler - Hourly cron handler got fired.
+[12/08/2014 6:35 PM] - SUCCESS : Cronjob_Handler - Hourly cron handler got fired.
+[12/08/2014 6:41 PM] - SUCCESS : Cronjob_Handler - Hourly cron handler got fired.
+[12/09/2014 3:16 AM] - SUCCESS : Cronjob_Handler - Hourly cron handler got fired.
+[12/09/2014 3:16 AM] - SUCCESS : Cronjob_Handler - Daily cron handler got fired.
+[12/09/2014 3:16 AM] - SUCCESS : DB Cleanup - checking if a cleanup needs to be done now...
+[12/09/2014 3:47 AM] - SUCCESS : Cronjob_Handler - Hourly cron handler got fired.
+[12/09/2014 4:40 AM] - SUCCESS : Cronjob_Handler - Hourly cron handler got fired.
+[12/09/2014 2:38 PM] - SUCCESS : Cronjob_Handler - Hourly cron handler got fired.
+[12/09/2014 2:45 PM] - SUCCESS : Cronjob_Handler - Hourly cron handler got fired.

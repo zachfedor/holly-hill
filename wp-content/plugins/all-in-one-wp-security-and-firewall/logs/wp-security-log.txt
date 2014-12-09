@@ -13,3 +13,4 @@
 [12/04/2014 4:56 PM] - FAILURE : Error inserting record into xdkstf_aiowps_login_activity
 >>>>>>> 0347c2d8813fccb4f80de4fa269a7193533b4de1
 [12/08/2014 3:33 PM] - FAILURE : Error inserting record into xdkstf_aiowps_login_activity
+[12/08/2014 7:16 PM] - FAILURE : Error inserting record into xdkstf_aiowps_login_activity
