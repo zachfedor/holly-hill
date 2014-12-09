@@ -1690,19 +1690,24 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   background: none;
 }
 /* line 29, ../sass/_navigation.scss */
+.nav-primary .slicknav_menu .slicknav_nav .current-menu-item .slicknav_row,
+.nav-primary .slicknav_menu .slicknav_nav .current_page_item a,
 .nav-primary .slicknav_menu .slicknav_nav .slicknav_row:hover,
 .nav-primary .slicknav_menu .slicknav_nav .slicknav_row a:hover,
 .nav-primary .slicknav_menu .slicknav_nav .menu-item a:hover {
+  border-radius: 6px;
   background: #2A367A;
   color: #fff;
 }
-/* line 34, ../sass/_navigation.scss */
-.child-campus .nav-primary .slicknav_menu .slicknav_nav .slicknav_row:hover, .child-campus
+/* line 37, ../sass/_navigation.scss */
+.child-campus .nav-primary .slicknav_menu .slicknav_nav .current-menu-item .slicknav_row, .child-campus
+.nav-primary .slicknav_menu .slicknav_nav .current_page_item a, .child-campus
+.nav-primary .slicknav_menu .slicknav_nav .slicknav_row:hover, .child-campus
 .nav-primary .slicknav_menu .slicknav_nav .slicknav_row a:hover, .child-campus
 .nav-primary .slicknav_menu .slicknav_nav .menu-item a:hover {
   background: #21598E;
 }
-/* line 41, ../sass/_navigation.scss */
+/* line 44, ../sass/_navigation.scss */
 .nav-primary .search-toggle {
   background: url("../../assets/images/icon-search.png") no-repeat center center;
   height: 103px;
@@ -1713,7 +1718,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   z-index: 999;
   text-indent: -99999em;
 }
-/* line 52, ../sass/_navigation.scss */
+/* line 55, ../sass/_navigation.scss */
 .nav-primary .search-form {
   width: 250px;
   position: absolute;
@@ -1723,15 +1728,15 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   right: 20px;
   overflow: hidden;
 }
-/* line 61, ../sass/_navigation.scss */
+/* line 64, ../sass/_navigation.scss */
 .child-campus .nav-primary .search-form {
   background: #7DC469;
 }
-/* line 65, ../sass/_navigation.scss */
+/* line 68, ../sass/_navigation.scss */
 .nav-primary .search-form.close {
   height: 0;
 }
-/* line 69, ../sass/_navigation.scss */
+/* line 72, ../sass/_navigation.scss */
 .nav-primary .search-form input[type="search"] {
   width: 65%;
   height: 40px;
@@ -1741,7 +1746,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   border: 0px;
   margin: 20px 0 0 5%;
 }
-/* line 77, ../sass/_navigation.scss */
+/* line 80, ../sass/_navigation.scss */
 .nav-primary .search-form input[type="submit"] {
   width: 25%;
   padding: 0px 10px;
@@ -1754,39 +1759,39 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   font-family: "LatoRegular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #fff;
 }
-/* line 87, ../sass/_navigation.scss */
+/* line 90, ../sass/_navigation.scss */
 .child-campus .nav-primary .search-form input[type="submit"] {
   background: #21598E;
 }
 
-/* line 95, ../sass/_navigation.scss */
+/* line 98, ../sass/_navigation.scss */
 .genesis-nav-menu {
   width: 100%;
   padding: 0 80px 0 0;
 }
 @media (max-width: 880px) {
-  /* line 95, ../sass/_navigation.scss */
+  /* line 98, ../sass/_navigation.scss */
   .genesis-nav-menu {
     display: none;
   }
 }
-/* line 105, ../sass/_navigation.scss */
+/* line 108, ../sass/_navigation.scss */
 .genesis-nav-menu > .wrap {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 110, ../sass/_navigation.scss */
+/* line 113, ../sass/_navigation.scss */
 .genesis-nav-menu .menu-item {
   position: relative;
   display: inline-block;
   text-align: left;
 }
-/* line 120, ../sass/_navigation.scss */
+/* line 123, ../sass/_navigation.scss */
 .genesis-nav-menu .menu-item:hover > .sub-menu, .genesis-nav-menu .menu-item:focus > .sub-menu, .genesis-nav-menu .menu-item:active > .sub-menu, .genesis-nav-menu .menu-item.sfHover > .sub-menu {
   left: auto;
   opacity: 1;
 }
-/* line 129, ../sass/_navigation.scss */
+/* line 132, ../sass/_navigation.scss */
 .genesis-nav-menu a {
   font-family: "LatoRegular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
@@ -1797,7 +1802,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   padding: 10px;
   text-decoration: none;
 }
-/* line 139, ../sass/_navigation.scss */
+/* line 142, ../sass/_navigation.scss */
 .genesis-nav-menu a:hover,
 .genesis-nav-menu a:focus,
 .genesis-nav-menu a:active,
@@ -1807,16 +1812,16 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   text-decoration: none;
   background: none;
 }
-/* line 147, ../sass/_navigation.scss */
+/* line 150, ../sass/_navigation.scss */
 .child-campus .genesis-nav-menu a:hover, .child-campus
 .genesis-nav-menu a:focus, .child-campus
 .genesis-nav-menu a:active, .child-campus
 .genesis-nav-menu .current-menu-item > a, .child-campus
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-  color: #21598E;
+  background: #21598E;
   background: none;
 }
-/* line 153, ../sass/_navigation.scss */
+/* line 157, ../sass/_navigation.scss */
 .genesis-nav-menu .hover-menu > a,
 .genesis-nav-menu .hover-menu > a:hover,
 .genesis-nav-menu .menu-item-has-children > a:hover {
@@ -1824,13 +1829,13 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   background: #2A367A;
   text-decoration: none;
 }
-/* line 159, ../sass/_navigation.scss */
+/* line 163, ../sass/_navigation.scss */
 .child-campus .genesis-nav-menu .hover-menu > a, .child-campus
 .genesis-nav-menu .hover-menu > a:hover, .child-campus
 .genesis-nav-menu .menu-item-has-children > a:hover {
   background: #21598E;
 }
-/* line 165, ../sass/_navigation.scss */
+/* line 169, ../sass/_navigation.scss */
 .genesis-nav-menu .sub-menu {
   position: absolute;
   top: 100%;
@@ -1841,15 +1846,15 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   background: #2A367A;
   width: 240px;
 }
-/* line 174, ../sass/_navigation.scss */
+/* line 178, ../sass/_navigation.scss */
 .child-campus .genesis-nav-menu .sub-menu {
   background: #21598E;
 }
-/* line 178, ../sass/_navigation.scss */
+/* line 182, ../sass/_navigation.scss */
 .genesis-nav-menu .sub-menu .menu-item {
   width: 100%;
 }
-/* line 182, ../sass/_navigation.scss */
+/* line 186, ../sass/_navigation.scss */
 .genesis-nav-menu .sub-menu a {
   position: relative;
   font-family: "LatoLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -1858,22 +1863,40 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   color: #fff;
   padding: 7px 10px;
 }
-/* line 189, ../sass/_navigation.scss */
+/* line 193, ../sass/_navigation.scss */
 .genesis-nav-menu .sub-menu a:hover {
   background: #6CA948;
   text-decoration: none;
 }
-/* line 192, ../sass/_navigation.scss */
+/* line 196, ../sass/_navigation.scss */
 .child-campus .genesis-nav-menu .sub-menu a:hover {
   background: #7DC469;
 }
-/* line 198, ../sass/_navigation.scss */
+/* line 202, ../sass/_navigation.scss */
+.genesis-nav-menu .sub-menu a:hover,
+.genesis-nav-menu .sub-menu a:focus,
+.genesis-nav-menu .sub-menu a:active,
+.genesis-nav-menu .sub-menu .current-menu-item > a,
+.genesis-nav-menu .sub-menu .sub-menu .current-menu-item > a:hover {
+  color: #fff !important;
+  text-decoration: none;
+  background: #6CA948 !important;
+}
+/* line 210, ../sass/_navigation.scss */
+.child-campus .genesis-nav-menu .sub-menu a:hover, .child-campus
+.genesis-nav-menu .sub-menu a:focus, .child-campus
+.genesis-nav-menu .sub-menu a:active, .child-campus
+.genesis-nav-menu .sub-menu .current-menu-item > a, .child-campus
+.genesis-nav-menu .sub-menu .sub-menu .current-menu-item > a:hover {
+  background: #7DC469 !important;
+}
+/* line 216, ../sass/_navigation.scss */
 .genesis-nav-menu .sub-menu .sub-menu {
   left: 240px !important;
   top: 0px !important;
 }
 
-/* line 220, ../sass/_navigation.scss */
+/* line 238, ../sass/_navigation.scss */
 ul.nav li.dropdown:hover > ul.dropdown-menu {
   display: block;
 }

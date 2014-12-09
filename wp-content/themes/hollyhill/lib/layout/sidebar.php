@@ -39,9 +39,12 @@ function hh_sidebar_menu_subnav(){
     // Get the post ID from the post object
     $page_id = $post->ID;
 
+    // The default menu is the adult campus
     $menu = 'Adult Campus Navigation';
 
-    //var_dump(get_campus_color_scheme($page_id));
+    $menu_root_id = null;
+
+    // if the page's color scheme is set to child campus
     if(get_campus_color_scheme($page_id) == 'child-campus'){
         $menu = 'Child Campus Navigation';
     }
@@ -61,34 +64,38 @@ function hh_sidebar_menu_subnav(){
     // Get the post's ancestors (ie. parents and grandparents)
     $page_ancestors = get_post_ancestors($page_id);
 
+    // If the page has parents
     if (count($page_ancestors) > 0) {
+        // Set the page ancestor to the deepest descendent
         $page_ancestor = reset($page_ancestors);
     } else {
+        // The page doesn't have ancestor's (ie. root level or child homepage)
         $page_ancestor = $page_id;
     }
 
-    if(get_campus_color_scheme($page_id) == 'child-campus') {
-
-    }
-
-    // Get the page's children pages
-    $children = get_pages('child_of='.$page_ancestor);
-
-    $menu_root_id = null;
-
+    // Loop through the menu items
     foreach($items as $item) {
 
         if($item->object_id == $page_ancestor){
+            // If the menu_item is for the ancestor page
+            // set the menu_root_id to the menu_item's ID
             $menu_root_id = $item->ID;
         }
 
+        // If the page_ancestor is a child of children's campus homepage
         if($page_ancestor == get_child_campus_id()){
-            //var_dump($item->ID);
+            // Set the page ancestor to the current page
             $page_ancestor = $page_id;
+
+            // set the menu_root_id to the menu_item's ID
             $menu_root_id = $item->ID;
         }
     }
 
+    // Get the ancestor page's children pages
+    $children = get_pages('child_of='.$page_ancestor);
+
+    // If the ancestor page has children
     if(count($children) > 0) {
         echo '<section class="page-navigation widget">';
         echo '<h3>' . get_the_title($page_ancestor) . '</h3>';
@@ -103,4 +110,3 @@ function hh_sidebar_menu_subnav(){
     }
 
 }
-
