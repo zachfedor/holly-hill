@@ -3,7 +3,7 @@ jQuery(function($){
     $primary_navigation = $('#nav');
 
     $("#menu-primary-navigation").slicknav({
-        prependTo:$('.nav-primary').find('.container'),
+        prependTo: $('.nav-primary').find('.container'),
         label: '',
         allowParentLinks: true
     });

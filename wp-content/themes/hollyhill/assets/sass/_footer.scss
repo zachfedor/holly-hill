@@ -40,7 +40,10 @@
     background-size: 115px 115px;
     text-indent:-99999em;
     @include breakpoint(small) {
-      margin:-10px auto 0;
+      margin:-25px auto 0;
+      width:155px;
+      height:155px;
+      background-size:155px 155px;
 
     }
   }
@@ -81,6 +84,7 @@
         .contact-us-phone {
           color: #ffffff;
           font-weight: 100;
+          font-family: $LatoLight;
 
           @include breakpoint(full) {
             font-size: 140%;
@@ -100,6 +104,7 @@
           .contact-us-phone-number {
             color: #ffffff;
             font-weight: 400;
+            font-family: $LatoHeavy;
 
             @include breakpoint(full) {
               margin-left: 10px;
@@ -138,6 +143,7 @@
             width: 100%;
             text-align: center;
             margin: 0;
+            padding: 10px 20px;
 
             &:hover {
               color: $green;
@@ -149,16 +155,16 @@
             }
 
             @include breakpoint(full) {
-              font-size: 160%;
-            }
-            @include breakpoint(large) {
-              font-size: 140%;
+              font-size: 190%;
             }
             @include breakpoint(medium) {
               font-size: 120%;
             }
             @include breakpoint(tablet) {
-              font-size: 100%;
+              font-size: 120%;
+            }
+            @include breakpoint(small) {
+              font-size: 160%;
             }
 
             &:before {
@@ -174,8 +180,15 @@
               z-index: -1;
               transition: all 0.1s ease-in-out;
 
+              @include breakpoint(large) {
+                top: 26px;
+
+              }
               @include breakpoint(medium) {
-                top: 25px;
+                top: 22px;
+              }
+              @include breakpoint(small) {
+                top: 26px;
               }
             }
 
@@ -254,10 +267,11 @@
           margin: 70px auto;
           float: right;
           position:relative;
+          text-shadow: 0 0 20px #000000;
           z-index: 3;
-          
+
           &:hover {
-            color: $blue;
+            color: $green;
             text-decoration: none;
           }
 
@@ -316,6 +330,11 @@
         top: 70px;
         left: 41.66667%;
         display: block;
+
+        .child-campus &{
+          border-left-color: $child_blue;
+        }
+
         @include breakpoint(small) {
           display: none;
         }
@@ -332,6 +351,11 @@
         top: 200px;
         left: 6%;
         display: none;
+
+        .child-campus &{
+          border-top-color: $child_blue;
+        }
+
         @include breakpoint(small) {
           display: block;
         }
@@ -339,7 +363,7 @@
 
       .child-campus &{
         background:$child_blue;
-        border-bottom:20px solid $child_green;
+        //border-bottom:20px solid $child_green;
       }
 
     }
@@ -451,125 +475,137 @@
   }
 }
 
-.footer-navigation ul.menu {
-  @extend %clearfix;
-  @extend %unstyled-list;
-  width: 100%;
-
-  > .wrap {
-    padding-left: 0;
-    padding-right: 0;
+.footer-navigation {
+  margin:10px 0 0 0;
+  @include breakpoint(small){
+    width:100%;
+    text-align: center;
   }
+  ul.menu {
+    @extend %clearfix;
+    @extend %unstyled-list;
+    width: 100%;
 
-  .menu-item {
-    position: relative;
-    display: inline-block;
-    text-align: left;
-
-    &:hover,
-    &:focus,
-    &:active,
-    &.sfHover {
-
-      > .sub-menu {
-        left: auto;
-        opacity: 1;
-      }
-    }
-  }
-
-  .hippa {
-    max-width:115px;
-    a{
-      margin:-20px 0 0 0;
-    }
-  }
-
-  a {
-    font-family: $LatoRegular;
-    @include font-size(16);
-    position: relative;
-    display: block;
-    color:#fff;
-    padding:20px 10px;
-    text-decoration: none;
-
-    @include breakpoint(medium){
-      @include font-size(14);
-      padding:20px 5px;
-    }
-  }
-
-  a:hover,
-  a:focus,
-  a:active,
-  .current-menu-item > a,
-  .sub-menu .current-menu-item > a:hover {
-    color:#fff;
-    text-decoration:none;
-    //background: $blue;
-    .child-campus &{
-      //background:$child_blue;
-    }
-  }
-
-  .sub-menu .current-menu-item > a {
-
-  }
-
-  > .menu-item > a {
-
-  }
-
-  .sub-menu {
-    position: absolute;
-    top: 100%;
-    left: -9999px;
-    z-index: 99;
-    opacity: 0;
-    transition: opacity .4s ease-in-out;
-    background: $blue;
-    width:200px;
-
-    .child-campus &{
-      background:$child_blue;
+    > .wrap {
+      padding-left: 0;
+      padding-right: 0;
     }
 
-    .menu-item{
-      width:100%;
-    }
-
-    a {
+    .menu-item {
       position: relative;
-      color: #fff;
-      padding:10px 10px;
+      display: inline-block;
+      text-align: left;
 
-      &:hover{
-        background: $green;
-        text-decoration: none;
+      @include breakpoint(small){
+        width:100%;
+        text-align: center;
+      }
 
-        .child-campus &{
-          background:$child_green;
+      &:hover,
+      &:focus,
+      &:active,
+      &.sfHover {
+
+        > .sub-menu {
+          left: auto;
+          opacity: 1;
         }
       }
     }
 
+    .hippa {
+      max-width:115px;
+      a{
+        margin:-20px 0 0 0;
+      }
+    }
+
+    a {
+      font-family: $LatoRegular;
+      @include font-size(16);
+      position: relative;
+      display: block;
+      color:#fff;
+      padding:20px 10px;
+      text-decoration: none;
+
+      @include breakpoint(medium){
+        @include font-size(14);
+        padding:20px 5px;
+      }
+    }
+
+    a:hover,
+    a:focus,
+    a:active,
+    .current-menu-item > a,
+    .sub-menu .current-menu-item > a:hover {
+      color:#fff;
+      text-decoration:none;
+      //background: $blue;
+      .child-campus &{
+        //background:$child_blue;
+      }
+    }
+
+    .sub-menu .current-menu-item > a {
+
+    }
+
+    > .menu-item > a {
+
+    }
+
     .sub-menu {
+      position: absolute;
+      top: 100%;
+      left: -9999px;
+      z-index: 99;
+      opacity: 0;
+      transition: opacity .4s ease-in-out;
+      background: $blue;
+      width:200px;
 
+      .child-campus &{
+        background:$child_blue;
+      }
+
+      .menu-item{
+        width:100%;
+      }
+
+      a {
+        position: relative;
+        color: #fff;
+        padding:10px 10px;
+
+        &:hover{
+          background: $green;
+          text-decoration: none;
+
+          .child-campus &{
+            background:$child_green;
+          }
+        }
+      }
+
+      .sub-menu {
+
+      }
     }
-  }
 
-  > .first {
+    > .first {
 
-    > a {
+      > a {
 
+      }
     }
-  }
 
-  > .last {
+    > .last {
 
-    > a {
+      > a {
 
+      }
     }
   }
 }

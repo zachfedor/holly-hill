@@ -3,13 +3,35 @@
 }
 
 .featured-area{
-    .container{
-      bottom: 0;
-      position: absolute;
-      @include breakpoint(small) {
-        width:100%;
+  position: relative;
+
+  .rsContent{
+    text-align:center;
+    position: relative;
+  }
+
+  .container{
+    margin:0 auto;
+    position: relative;
+    text-align:left;
+    height:400px;
+    z-index:999;
+    //display: inline-block;
+    @include breakpoint(small) {
+      z-index:0;
+      width:100%;
       }
     }
+  .image-container{
+    position:absolute;
+    top:0;
+    /*@include breakpoint(small) {
+      width:100%;
+      position:relative;
+      float:left;
+      clear:both;
+    }*/
+  }
     .slide-block{
       background: none repeat scroll 0 0 $blue;
       bottom: 0;
@@ -81,6 +103,12 @@
   .hh-btn{
     @include font-size(18);
     float:left;
+    padding:10px 40px;
+
+    @include breakpoint(small) {
+      width:100%;
+      text-align:center;
+    }
   }
 }
 
