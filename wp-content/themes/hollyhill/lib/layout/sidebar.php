@@ -33,46 +33,72 @@ function child_do_sidebar() {
 add_action('genesis_before_sidebar_widget_area', 'hh_page_children_nav');
 function hh_page_children_nav()
 {
-    if (!is_search()) {
-        ?>
-        <section class="page-navigation widget">
-            <?php
+    // If this is a page AND it isn't search
+    if (is_page() && !is_search() ) {
+
+            // Get the global post object
             global $post;
+
+            // Get the post ID from the post object
             $page_id = $post->ID;
-            $page_ancestor = get_post_ancestors($page_id);
-            if (count($page_ancestor) > 0) {
-                //var_dump($page_ancestor);
-                $page_ancestor = array_pop($page_ancestor);
+
+            // Get the post's ancestors (ie. parents and grandparents)
+            $page_ancestors = get_post_ancestors($page_id);
+
+            // Get the post's children
+            $children = get_pages('child_of='.$page_id);
+
+
+
+            if (count($page_ancestors) > 0) {
+                $page_ancestor = reset($page_ancestors);
             } else {
                 $page_ancestor = $page_id;
             }
-            echo '<h3>' . get_the_title($page_ancestor) . '</h3>';
 
-            $args = array(
-                'authors' => '',
-                'child_of' => $page_ancestor,
-                'date_format' => get_option('date_format'),
-                'depth' => 1,
-                'echo' => 1,
-                'exclude' => '',
-                'include' => '',
-                'link_after' => '',
-                'link_before' => '',
-                'post_type' => 'page',
-                'post_status' => 'publish',
-                'show_date' => '',
-                'sort_column' => 'menu_order, post_title',
-                'sort_order' => '',
-                'title_li' => '',
-                'walker' => ''
-            );
+            //var_dump(get_child_campus_id());
+            //var_dump($page_ancestors);
+            //var_dump($page_ancestor);
+            //var_dump(count($children));
 
-            echo '<ul>';
-            wp_list_pages($args);
-            echo '</ul>';
+            // If the ancestor is child_campus homepage
+            if($page_ancestor == get_child_campus_id()){
+                $page_ancestor = $page_id;
+            }
+
+
+            if($page_ancestor == $page_id && count($children) > 0) {
+                echo '<section class="page-navigation widget">';
+                echo '<h3>' . get_the_title($page_ancestor) . '</h3>';
+
+                $args = array(
+                    'authors' => '',
+                    'child_of' => $page_ancestor,
+                    'date_format' => get_option('date_format'),
+                    'depth' => 1,
+                    'echo' => 1,
+                    'exclude' => '',
+                    'include' => '',
+                    'link_after' => '',
+                    'link_before' => '',
+                    'post_type' => 'page',
+                    'post_status' => 'publish',
+                    'show_date' => '',
+                    'sort_column' => 'menu_order, post_title',
+                    'sort_order' => '',
+                    'title_li' => '',
+                    'walker' => ''
+                );
+
+                echo '<ul>';
+                wp_list_pages($args);
+                echo '</ul>';
+                echo '</section>';
+            }
+            /**/
+
 
             ?>
-        </section>
     <?php
     }
 
