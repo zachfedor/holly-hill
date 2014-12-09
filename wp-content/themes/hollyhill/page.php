@@ -12,9 +12,16 @@ function hh_page_feaured_image(){
 
     // TODO: Create a theme option for a default image fallback
 
+    global $hh_theme_options;
+    $default_image = $hh_theme_options['default_featured_image'];
+
     $attachment_id = get_post_thumbnail_id();
     $attachment_obj = wp_get_attachment_image_src($attachment_id, 'full');
     $attachment_src = $attachment_obj[0];
+
+    if($attachment_src == null){
+        $attachment_src = $default_image['url'];
+    }
 
     echo '<div class="featured-image-banner">';
     echo '<div class="container" style="background-image:url('. $attachment_src .');"></div>';

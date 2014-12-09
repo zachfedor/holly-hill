@@ -269,7 +269,7 @@
                     'fields' => array(
 
                         array(
-                            'id'       => 'defualt_featured_image',
+                            'id'       => 'default_featured_image',
                             'type'     => 'media',
                             'title'    => __( 'Default Featured Image', 'hh_theme_options' )
                         )
