@@ -115,8 +115,12 @@
   .tagline{
     @include font-size(46);
     text-align: left;
-    font-family: serif;
     color: #2A367A;
+
+    strong {
+      font-family: $BemboSemiBoldItalic !important;
+      font-weight:700;
+    }
 
     @include breakpoint(medium) {
       @include font-size(35);

@@ -262,6 +262,22 @@
                 );
 
                 $this->sections[] = array(
+                    'title'  => __( 'Theme Settings', 'hh_theme_options' ),
+                    'desc'   => __( 'These are settings for the adult campus homepage.' ),
+                    'icon'   => 'el-icon-home',
+                    // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
+                    'fields' => array(
+
+                        array(
+                            'id'       => 'defualt_featured_image',
+                            'type'     => 'media',
+                            'title'    => __( 'Default Featured Image', 'hh_theme_options' )
+                        )
+
+                    )
+                );
+
+                $this->sections[] = array(
                     'title'  => __( 'Adult Campus', 'hh_theme_options' ),
                     'desc'   => __( 'These are settings for the adult campus homepage.' ),
                     'icon'   => 'el-icon-home',

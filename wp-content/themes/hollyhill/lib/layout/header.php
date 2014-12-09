@@ -50,10 +50,10 @@ function hh_header(){
             }
 
             ?>
-            <strong><em><?php echo $tagline1; ?></em></strong> <?php //make theme option variable ?>
+            <strong><?php echo $tagline1; ?></strong> <?php //make theme option variable ?>
         </div>
         <div class="tagline2 tagline col-sm-4">
-            <strong><em><?php echo $tagline2; ?></strong></em> <?php //make theme option variable ?>
+            <strong><?php echo $tagline2; ?></strong> <?php //make theme option variable ?>
         </div>
     </div>
 <?php

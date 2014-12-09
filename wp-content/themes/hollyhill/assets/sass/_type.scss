@@ -12,6 +12,7 @@ body {
 	font-family: $LatoRegular;
 	@include font-size(13);
     color:#353535;
+    line-height:1.428;
 	// text-rendering: optimizeLegibility; // Use with caution. May break certain @font-face fonts.
 
 }
@@ -33,6 +34,12 @@ textarea:focus,
 
 a {
 
+  color:$green;
+  .child-campus &{
+    color:$child_green;
+  }
+
+
 	&:hover,
 	&:focus,
 	&:active {
@@ -52,7 +59,8 @@ p {
 }
 
 strong {
-	font-weight: 700;
+	font-weight: 300;
+    font-family: $LatoHeavy;
 }
 
 em{
