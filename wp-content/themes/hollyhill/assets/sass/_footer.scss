@@ -39,6 +39,11 @@
     height:115px;
     background-size: 115px 115px;
     text-indent:-99999em;
+
+    .child-campus &{
+      background: url('../../assets/images/child-campus-logo.png') no-repeat center center;
+    }
+
     @include breakpoint(small) {
       margin:-25px auto 0;
       width:155px;

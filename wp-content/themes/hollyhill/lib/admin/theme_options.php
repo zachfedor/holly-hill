@@ -269,6 +269,20 @@
                     'fields' => array(
 
                         array(
+                            'id'       => 'header_ribbon_left',
+                            'type'     => 'text',
+                            'title'    => __( 'Header Ribbon Left', 'hh_theme_options' ),
+                            'default'  => '1.800.447.1800'
+                        ),
+
+                        array(
+                            'id'       => 'header_ribbon_right',
+                            'type'     => 'text',
+                            'title'    => __( 'Header Ribbon Right', 'hh_theme_options' ),
+                            'default'  => 'Call us for a No-Cost Assessment'
+                        ),
+
+                        array(
                             'id'       => 'default_featured_image',
                             'type'     => 'media',
                             'title'    => __( 'Default Featured Image', 'hh_theme_options' )
@@ -284,6 +298,30 @@
                     // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                     'fields' => array(
 
+                        array(
+                            'id'       => 'header_tagline_left',
+                            'type'     => 'text',
+                            'title'    => __( 'Header Tagline Left', 'hh_theme_options' ),
+                            'default'  => 'Patient focused.'
+                        ),
+                        array(
+                            'id'       => 'header_tagline_right',
+                            'type'     => 'text',
+                            'title'    => __( 'Header Tagline Right', 'hh_theme_options' ),
+                            'default'  => 'Passion driven.'
+                        ),
+                        array(
+                            'id'       => 'googlemaps_directions_link',
+                            'type'     => 'text',
+                            'title'    => __( 'Google Maps Directions Link', 'hh_theme_options' ),
+                            'default'  => 'https://www.google.com/maps/dir//35.7825021,-78.5839384/@35.782241,-78.601512,14z?hl=en-US'
+                        ),
+                        array(
+                            'id'       => 'googlemaps_directions_link',
+                            'type'     => 'text',
+                            'title'    => __( 'Google Maps Directions Link', 'hh_theme_options' ),
+                            'default'  => 'https://www.google.com/maps/dir//35.7825021,-78.5839384/@35.782241,-78.601512,14z?hl=en-US'
+                        ),
                         array(
                             'id'       => 'homepage_intro_headline',
                             'type'     => 'text',
@@ -326,6 +364,24 @@
                             'type'     => 'select',
                             'title'    => __( 'Child Campus Homepage', 'hh_theme_options' ),
                             'data'     => 'page'
+                        ),
+                        array(
+                            'id'       => 'child_campus_header_tagline_left',
+                            'type'     => 'text',
+                            'title'    => __( 'Header Tagline Left', 'hh_theme_options' ),
+                            'default'  => 'Growing Together.'
+                        ),
+                        array(
+                            'id'       => 'child_campus_header_tagline_right',
+                            'type'     => 'text',
+                            'title'    => __( 'Header Tagline Right', 'hh_theme_options' ),
+                            'default'  => 'For The Future.'
+                        ),
+                        array(
+                            'id'       => 'child_campus_googlemaps_directions_link',
+                            'type'     => 'text',
+                            'title'    => __( 'Google Maps Directions Link', 'hh_theme_options' ),
+                            'default'  => 'https://www.google.com/maps?ll=35.779129,-78.578386&z=16&t=m&hl=en-US&gl=US&mapclient=embed&daddr=201+Michael+J+Smith+Ln+Raleigh,+NC+27610@35.779129,-78.578386'
                         ),
                         array(
                             'id'       => 'child_campus_homepage_intro_headline',

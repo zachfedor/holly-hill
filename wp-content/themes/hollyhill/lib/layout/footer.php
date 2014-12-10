@@ -12,7 +12,11 @@ remove_action( 'genesis_footer', 'genesis_do_footer' );
 //remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 ) ;
 
 add_action( 'genesis_footer', 'hh_pre_footer' ) ;
-function hh_pre_footer(){ ?>
+function hh_pre_footer(){
+
+    global $hh_theme_options;
+
+    ?>
     <div class="pre-footer">
         <div class="contact-us">
             <div class="container">
@@ -22,11 +26,18 @@ function hh_pre_footer(){ ?>
                             CALL US NOW AT: <span class="contact-us-phone-number">1.800.447.1800</span>
                         </div>
                         <div class="contact-us-email">
-                            <a href="" class="contact-us-email-button hh-btn" ><span>EMAIL US NOW</span></a>
+                            <a href="<?php echo site_url('contact-us'); ?>" class="contact-us-email-button hh-btn" ><span>EMAIL US NOW</span></a>
                         </div>
                     </div>
                     <div class="get-directions col-sm-7">
-                        <a href="" class="get-directions-link" >
+                        <?php
+                            if(get_campus_color_scheme(get_the_ID()) == 'adult-campus'){
+                                $get_directions_link = $hh_theme_options['googlemaps_directions_link'];
+                            } else {
+                                $get_directions_link = $hh_theme_options['child_campus_googlemaps_directions_link'];
+                            }
+                        ?>
+                        <a href="<?php echo $get_directions_link; ?>" target="_blank" class="get-directions-link" >
                             <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/icon-map.png" alt="Map" />
                             <span>GET DIRECTIONS NOW</span>
                         </a>
@@ -50,10 +61,10 @@ function hh_footer(){ ?>
                 </div>
 
                 <div class="logo-action-alliance">
-                    <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/logo-action-alliance.png" />
+                    <a href="http://actionallianceforsuicideprevention.org/" target="_blank"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/logo-action-alliance.png" /></a>
                 </div>
                 <div class="logo-gold-commission">
-                    <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/logo-gold-commission.png" />
+                    <a href="http://www.jointcommission.org/" target="_blank"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/logo-gold-commission.png" /></a>
                 </div>
             </div>
         </div>
