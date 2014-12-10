@@ -2009,13 +2009,45 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 /* line 33, ../sass/_content.scss */
+.arrow-container {
+  height: 50px;
+  margin: -50px auto 0;
+  z-index: 300;
+  position: relative;
+}
+
+/* line 40, ../sass/_content.scss */
+.css-arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 30px solid #fff;
+  z-index: 10;
+  position: absolute;
+  bottom: 0px;
+  left: unset;
+  display: inline-block;
+}
+/* line 52, ../sass/_content.scss */
+.child-campus .css-arrow-up {
+  border-left-color: #21598E;
+}
+@media (max-width: 767px) {
+  /* line 40, ../sass/_content.scss */
+  .css-arrow-up {
+    display: none;
+  }
+}
+
+/* line 61, ../sass/_content.scss */
 .featured-image-banner {
   text-align: center;
   overflow: hidden;
   position: relative;
 }
-/* line 38, ../sass/_content.scss */
-.featured-image-banner .container {
+/* line 66, ../sass/_content.scss */
+.featured-image-banner .image-container {
   background-size: cover;
   background-position: center center;
   height: 350px;
@@ -2024,13 +2056,13 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   padding: 0 75px;
 }
 @media (max-width: 992px) {
-  /* line 38, ../sass/_content.scss */
-  .featured-image-banner .container {
+  /* line 66, ../sass/_content.scss */
+  .featured-image-banner .image-container {
     padding: 0;
   }
 }
-/* line 50, ../sass/_content.scss */
-.featured-image-banner .container:before {
+/* line 78, ../sass/_content.scss */
+.featured-image-banner .image-container:before {
   background: #6CA948;
   background: url("../../assets/images/pattern-one.png") repeat 0 0;
   content: "";
@@ -2041,32 +2073,32 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   z-index: -1;
   display: inline-block;
 }
-/* line 61, ../sass/_content.scss */
-.child-campus .featured-image-banner .container:before {
+/* line 89, ../sass/_content.scss */
+.child-campus .featured-image-banner .image-container:before {
   background: url("../../assets/images/pattern-two.png") repeat 0 0;
 }
 
-/* line 76, ../sass/_content.scss */
+/* line 105, ../sass/_content.scss */
 .entry-content a {
   color: #6CA948;
 }
-/* line 78, ../sass/_content.scss */
+/* line 107, ../sass/_content.scss */
 .child-campus .entry-content a {
   color: #7DC469;
 }
-/* line 92, ../sass/_content.scss */
+/* line 121, ../sass/_content.scss */
 .entry-content .attachment a,
 .entry-content .gallery a {
   border: none;
 }
-/* line 97, ../sass/_content.scss */
+/* line 126, ../sass/_content.scss */
 .entry-content p {
   text-overflow: ellipsis;
   word-break: break-word;
   hyphens: auto;
   margin: 0 0 10px 0;
 }
-/* line 104, ../sass/_content.scss */
+/* line 133, ../sass/_content.scss */
 .entry-content ol,
 .entry-content ul {
   overflow: hidden;
@@ -2076,12 +2108,12 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   word-break: break-word;
   hyphens: auto;
 }
-/* line 114, ../sass/_content.scss */
+/* line 143, ../sass/_content.scss */
 .entry-content ol li,
 .entry-content ul li {
   margin: 0 0 5px 0;
 }
-/* line 118, ../sass/_content.scss */
+/* line 147, ../sass/_content.scss */
 .entry-content ol ol,
 .entry-content ol ul,
 .entry-content ul ol,
@@ -2089,35 +2121,35 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   margin-bottom: .5em;
   padding-left: 1.5em;
 }
-/* line 127, ../sass/_content.scss */
+/* line 156, ../sass/_content.scss */
 .entry-content ol li {
   list-style-type: decimal;
 }
-/* line 134, ../sass/_content.scss */
+/* line 163, ../sass/_content.scss */
 .entry-content ul li {
   list-style-type: disc;
 }
-/* line 140, ../sass/_content.scss */
+/* line 169, ../sass/_content.scss */
 .entry-content blockquote {
   margin: 0 0 10px;
 }
 
-/* line 152, ../sass/_content.scss */
+/* line 181, ../sass/_content.scss */
 .entry-meta {
   clear: both;
 }
 
-/* line 168, ../sass/_content.scss */
+/* line 197, ../sass/_content.scss */
 .entry-categories,
 .entry-tags {
   display: block;
 }
 
-/* line 173, ../sass/_content.scss */
+/* line 202, ../sass/_content.scss */
 .archive-pagination {
   clear: both;
 }
-/* line 180, ../sass/_content.scss */
+/* line 209, ../sass/_content.scss */
 .archive-pagination li {
   display: inline;
 }

@@ -77,7 +77,7 @@ function hh_homepage_intro(){
     echo '<div class="intro">';
     echo $hh_theme_options['child_campus_homepage_intro_content'];
     echo '</div>';
-    echo '<a class="hh-btn green" href="#">Learn More</a>';
+    echo '<a class="hh-btn green" href="'. $hh_theme_options['child_campus_homepage_intro_learnmore'] .'">Learn More</a>';
     echo '</div>';
     echo '<div class="col-md-6 intro-image hidden-xs">';
     $attachment_id = $hh_theme_options['child_campus_homepage_intro_image']['id'];

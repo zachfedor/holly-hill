@@ -24,7 +24,15 @@ function hh_page_feaured_image(){
     }
 
     echo '<div class="featured-image-banner">';
-    echo '<div class="container" style="background-image:url('. $attachment_src .');"></div>';
+
+    echo '<div class="image-container container" style="background-image:url('. $attachment_src .');">';
+    echo '</div>';
+
+    echo '</div>';
+
+
+    echo '<div class="arrow-container container">';
+    echo '<span class="css-arrow-up"></span>';
     echo '</div>';
 
 }

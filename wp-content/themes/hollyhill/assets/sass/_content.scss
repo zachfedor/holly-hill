@@ -30,12 +30,40 @@
 
 }
 
+.arrow-container{
+  height: 50px;
+  margin: -50px auto 0;
+  z-index: 300;
+  position: relative;
+}
+
+.css-arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 30px solid #fff;
+  z-index: 10;
+  position: absolute;
+  bottom: 0px;
+  left: unset;
+  display: inline-block;
+
+  .child-campus &{
+    border-left-color: $child_blue;
+  }
+
+  @include breakpoint(small) {
+    display: none;
+  }
+}
+
 .featured-image-banner{
   text-align:center;
   overflow:hidden;
   position:relative;
 
-  .container {
+  .image-container {
     background-size: cover;
     background-position: center center;
     height: 350px;
@@ -56,13 +84,14 @@
       position: absolute;
       width: 99999px;
       z-index: -1;
-      display:inline-block;
+      display: inline-block;
 
       .child-campus & {
         background: url('../../assets/images/pattern-two.png') repeat 0 0;
       }
 
     }
+
   }
 }
 
