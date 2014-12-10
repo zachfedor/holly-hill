@@ -6,5 +6,35 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  line-height: 1.2;
+  color:$blue;
+  .child-campus &{
+    color:$child_blue;
+  }
+}
+
+h1{
+  font-family: $BemboSemiBoldItalic;
+  @include font-size(32);
+}
+
+h2{
+  font-family: $BemboSemiBoldItalic;
+  @include font-size(28);
+}
+
+h3{
+  font-family: $BemboSemiBoldItalic;
+  @include font-size(24);
+}
+h4{
+  font-family: $LatoRegular;
+  @include font-size(20);
+}
+h5{
+  font-family: $LatoRegular;
+  @include font-size(18);
+}
+h6{
+  font-family: $LatoRegular;
+  @include font-size(16);
 }
