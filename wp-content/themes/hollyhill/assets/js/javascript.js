@@ -18,6 +18,10 @@ jQuery(function($){
         $('.program-icons').find('.button-row').equalize({reset: true});
     }
 
+    function equalize_program_buttons(){
+        $('.site-header').find('.ribbon').find('.row').equalize({reset: true});
+    }
+
 
 	//Add Hover effect to menus
 	jQuery('ul.nav li.dropdown').hover(function() {

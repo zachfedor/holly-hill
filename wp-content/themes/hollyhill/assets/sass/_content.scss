@@ -49,13 +49,6 @@
   left: unset;
   display: inline-block;
 
-  .child-campus &{
-    border-left-color: $child_blue;
-  }
-
-  @include breakpoint(small) {
-    display: none;
-  }
 }
 
 .featured-image-banner{
