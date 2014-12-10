@@ -317,12 +317,6 @@
                             'default'  => 'https://www.google.com/maps/dir//35.7825021,-78.5839384/@35.782241,-78.601512,14z?hl=en-US'
                         ),
                         array(
-                            'id'       => 'googlemaps_directions_link',
-                            'type'     => 'text',
-                            'title'    => __( 'Google Maps Directions Link', 'hh_theme_options' ),
-                            'default'  => 'https://www.google.com/maps/dir//35.7825021,-78.5839384/@35.782241,-78.601512,14z?hl=en-US'
-                        ),
-                        array(
                             'id'       => 'homepage_intro_headline',
                             'type'     => 'text',
                             'title'    => __( 'Intro Headline', 'hh_theme_options' ),
