@@ -10,15 +10,17 @@ jQuery(function($){
 
 
     equalize_program_buttons();
+    site_header_ribbon();
     $(window).on('resize', function(){
         equalize_program_buttons();
+        site_header_ribbon();
     });
 
     function equalize_program_buttons(){
         $('.program-icons').find('.button-row').equalize({reset: true});
     }
 
-    function equalize_program_buttons(){
+    function site_header_ribbon(){
         $('.site-header').find('.ribbon').find('.row').equalize({reset: true});
     }
 
