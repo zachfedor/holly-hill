@@ -42,6 +42,7 @@
 
     .child-campus &{
       background: url('../../assets/images/child-campus-logo.png') no-repeat center center;
+      background-size: 115px 115px;
     }
 
     @include breakpoint(small) {
