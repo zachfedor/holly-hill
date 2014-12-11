@@ -13,8 +13,11 @@ unregister_sidebar( 'header-right' );
 
 add_action( 'genesis_header', 'hh_header' ) ;
 function hh_header(){
-    global $template;
+    //global $template;
     //echo $template;
+
+    global $hh_theme_options;
+
 
 ?>
     <div class="ribbon">
@@ -25,10 +28,10 @@ function hh_header(){
             </a>
             <div class="row">
                 <div class="phone col-xs-2 col-sm-3">
-                    1.800.447.1800 <?php //make theme option variable ?>
+                    <?php echo $hh_theme_options['header_ribbon_left']; ?>
                 </div>
                 <div class="call-us col-xs-3 col-sm-5">
-                    Call us for a No-Cost Assessment <?php //make theme option variable ?>
+                    <?php echo $hh_theme_options['header_ribbon_right']; ?>
                 </div>
             </div>
         </div>
@@ -38,22 +41,22 @@ function hh_header(){
             <?php
 
             if(get_campus_color_scheme(get_the_ID()) == 'adult-campus' || is_front_page()){
-                $tagline1 = 'Patient focused.';
+                $tagline1 = $hh_theme_options['header_tagline_left'];
             } else {
-                $tagline1 = 'Growing Together.';
+                $tagline1 = $hh_theme_options['child_campus_header_tagline_left'];
             }
 
             if(get_campus_color_scheme(get_the_ID()) == 'adult-campus' || is_front_page()){
-                $tagline2 = 'Passion driven.';
+                $tagline2 = $hh_theme_options['header_tagline_right'];
             } else {
-                $tagline2 = 'For The Future.';
+                $tagline2 = $hh_theme_options['child_campus_header_tagline_right'];
             }
 
             ?>
-            <strong><em><?php echo $tagline1; ?></em></strong> <?php //make theme option variable ?>
+            <strong><?php echo $tagline1; ?></strong> <?php //make theme option variable ?>
         </div>
         <div class="tagline2 tagline col-sm-4">
-            <strong><em><?php echo $tagline2; ?></strong></em> <?php //make theme option variable ?>
+            <strong><?php echo $tagline2; ?></strong> <?php //make theme option variable ?>
         </div>
     </div>
 <?php

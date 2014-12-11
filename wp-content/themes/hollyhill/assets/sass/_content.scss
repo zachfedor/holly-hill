@@ -30,14 +30,76 @@
 
 }
 
+.arrow-container{
+  height: 50px;
+  margin: -50px auto 0;
+  z-index: 300;
+  position: relative;
+}
+
+.css-arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 30px solid #fff;
+  z-index: 10;
+  position: absolute;
+  bottom: 0px;
+  left: unset;
+  display: inline-block;
+
+}
+
+.featured-image-banner{
+  text-align:center;
+  overflow:hidden;
+  position:relative;
+
+  .image-container {
+    background-size: cover;
+    background-position: center center;
+    height: 350px;
+    margin:0 auto;
+    box-sizing: content-box;
+    padding: 0 75px;
+
+    @include breakpoint(medium) {
+      padding:0;
+    }
+
+    &:before {
+      background: $green;
+      background: url('../../assets/images/pattern-one.png') repeat 0 0;
+      content: "";
+      height: 350px;
+      left: 0;
+      position: absolute;
+      width: 99999px;
+      z-index: -1;
+      display: inline-block;
+
+      .child-campus & {
+        background: url('../../assets/images/pattern-two.png') repeat 0 0;
+      }
+
+    }
+
+  }
+}
+
 .entry-content {
 	// overflow: hidden;
 
-    font-family: $LatoRegular;
-    @include font-size(13);
-    color:#353535;
+    //font-family: $LatoRegular;
+    //@include font-size(13);
+    //color:#353535;
 
 	a {
+      color:$green;
+      .child-campus &{
+        color:$child_green;
+      }
 
 		&:hover,
 		&:focus,
@@ -58,16 +120,22 @@
 		text-overflow: ellipsis;
 		word-break: break-word;
 		hyphens: auto;
+        margin:0 0 10px 0;
 	}
 
 	ol,
 	ul {
 		overflow: hidden;
-		margin-bottom: 1.5em;
-		padding-left: 2.5em;
+		margin:10px 0;
+        padding:0 0 0 20px;
 		text-overflow: ellipsis;
 		word-break: break-word;
 		hyphens: auto;
+
+
+      li{
+       margin:0 0 5px 0;
+      }
 
 		ol,
 		ul {
@@ -90,8 +158,9 @@
 		}
 	}
 
-	blockquote {
 
+	blockquote {
+      margin:0 0 10px;
 	 	p {
 
 	 	}

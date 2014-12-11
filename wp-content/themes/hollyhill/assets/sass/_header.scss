@@ -9,6 +9,7 @@
 
   @include breakpoint(xsmall){
     width:100%;
+
   }
 
   .wrap{
@@ -25,6 +26,11 @@
     width:255px;
     height:255px;
     text-indent:-99999em;
+
+    .child-campus &{
+      background: url('../../assets/images/child-campus-logo.png') no-repeat center center;
+    }
+
     @include breakpoint(xsmall){
       float:left;
       margin: -22px 0 0;
@@ -63,6 +69,8 @@
       padding:20px 40px;
       font-family: $LatoSemiBold;
       letter-spacing:3px;
+      box-sizing:content-box;
+
 //      position: absolute;
 //      left:0;
 //      top: 50%;
@@ -71,6 +79,7 @@
       @include breakpoint(small){
         @include font-size(15);
         letter-spacing:0px;
+        line-height:4.1em;
       }
       @include breakpoint(xsmall){
         @include font-size(21);
@@ -80,6 +89,8 @@
         padding:25px 25px 25px 0;
         right:0;
         left:auto !important;
+        line-height:1.1em;
+        height:auto !important;
       }
 
     }
@@ -89,7 +100,10 @@
       color:#fff;
       text-align:right;
       @include font-size(19);
+      line-height:2.1em;
       font-family: $LatoSemiBold;
+      box-sizing:content-box;
+
 
 //      position: absolute;
 //      top: 50%;
@@ -98,6 +112,7 @@
 
       @include breakpoint(medium){
         @include font-size(15);
+        line-height:2.1em;
       }
 
       @include breakpoint(xsmall){
@@ -115,8 +130,12 @@
   .tagline{
     @include font-size(46);
     text-align: left;
-    font-family: serif;
     color: #2A367A;
+
+    strong {
+      font-weight:700;
+      font-family: $BemboSemiBoldItalic !important;
+    }
 
     @include breakpoint(medium) {
       @include font-size(35);

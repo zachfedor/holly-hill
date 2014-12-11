@@ -16,13 +16,29 @@
   .slicknav_menu {
     display:none;
     background:none;
+
+    @include breakpoint(tablet) {
+      display:block;
+    }
+
     .slicknav_btn {
       float: left;
       background:none;
     }
-    @include breakpoint(tablet) {
-      display:block;
+
+    .slicknav_nav .current-menu-item .slicknav_row,
+    .slicknav_nav .current_page_item a,
+    .slicknav_nav .slicknav_row:hover,
+    .slicknav_nav .slicknav_row a:hover,
+    .slicknav_nav .menu-item a:hover{
+      border-radius: 6px;
+      background:$blue;
+      color:#fff;
+      .child-campus &{
+        background: $child_blue;
+      }
     }
+
   }
 
   .search-toggle{
@@ -39,14 +55,14 @@
   .search-form{
     width: 250px;
     position: absolute;
-    background: $blue;
+    background: $green;
     //padding: 20px 10px 10px 10px;
     padding: 0px;
     height:0px;
     right: 20px;
     overflow:hidden;
     .child-campus &{
-      background: $child_blue;
+      background: $child_green;
     }
 
     &.close{
@@ -66,13 +82,13 @@
       padding:0px 10px;
       margin: 20px 5% 0 0;
       height:40px;
-      background:$child_blue;
+      background:$blue;
       @include font-size(14);
       border:0px;
       font-family: $LatoRegular;
       color:#fff;
       .child-campus &{
-        background: $blue;
+        background: $child_blue;
       }
     }
   }
@@ -132,8 +148,9 @@
         text-decoration:none;
         background: none;
       .child-campus &{
-        color: $child_blue;
+        background: $child_blue;
         background: none;
+
         }
       }
 
@@ -181,6 +198,20 @@
             }
           }
 		}
+
+        a:hover,
+        a:focus,
+        a:active,
+        .current-menu-item > a,
+        .sub-menu .current-menu-item > a:hover {
+          color: #fff !important;
+          text-decoration:none;
+          background: $green !important;
+          .child-campus &{
+            background: $child_green !important;
+
+          }
+        }
 
 		.sub-menu {
           left:240px !important;

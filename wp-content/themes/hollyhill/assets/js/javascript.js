@@ -3,19 +3,25 @@ jQuery(function($){
     $primary_navigation = $('#nav');
 
     $("#menu-primary-navigation").slicknav({
-        prependTo:$('.nav-primary').find('.container'),
+        prependTo: $('.nav-primary').find('.container'),
         label: '',
         allowParentLinks: true
     });
 
 
     equalize_program_buttons();
+    site_header_ribbon();
     $(window).on('resize', function(){
         equalize_program_buttons();
+        site_header_ribbon();
     });
 
     function equalize_program_buttons(){
         $('.program-icons').find('.button-row').equalize({reset: true});
+    }
+
+    function site_header_ribbon(){
+        $('.site-header').find('.ribbon').find('.row').equalize({reset: true});
     }
 
 
