@@ -77,7 +77,7 @@ function hh_landing_page_bottom(){ ?>
                 <div class="button-group col-sm-3 adult-button">
                     <h4>Adult<br />Campus</h4>
                     <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/landing-page-adult-thumb.jpg" />
-                    <a class="landing-continue" href="<?php echo site_url('adult-campus-homepage'); ?>">Continue <span class="icon"></span></a>
+                    <a class="landing-continue" href="<?php echo site_url('adult-campus'); ?>">Continue <span class="icon"></span></a>
                 </div>
             </div>
         </div>
