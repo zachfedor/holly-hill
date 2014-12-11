@@ -97,7 +97,7 @@
             font-size: 140%;
           }
           @include breakpoint(large) {
-            font-size: 120%;
+            font-size: 110%;
           }
           @include breakpoint(medium) {
             font-size: 100%;
@@ -111,7 +111,10 @@
           .contact-us-phone-number {
             color: #ffffff;
             font-weight: 400;
+            font-size: 120%;
             font-family: $LatoHeavy;
+            position: relative;
+            top: -3px;
 
             @include breakpoint(full) {
               margin-left: 10px;
@@ -124,14 +127,17 @@
             @include breakpoint(medium) {
               float: none;
               margin-left: 0px;
+              top: 0;
             }
             @include breakpoint(tablet) {
               float: none;
               margin-left: 0px;
+              top: 0;
             }
             @include breakpoint(small) {
               float: right;
               margin-left: 10px;
+              top: -3px;
             }
           }
         }
@@ -189,7 +195,6 @@
 
               @include breakpoint(large) {
                 top: 26px;
-
               }
               @include breakpoint(medium) {
                 top: 22px;
