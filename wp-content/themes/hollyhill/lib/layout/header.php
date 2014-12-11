@@ -22,7 +22,18 @@ function hh_header(){
 ?>
     <div class="ribbon">
         <div class="container">
-            <a class="logo" href="<?php echo home_url(); ?>">
+
+            <?php
+
+            if(get_campus_color_scheme(get_the_ID()) == 'adult-campus'){
+                $logo_url = site_url('adult-campus');
+            } else {
+                $logo_url = site_url('child-adolescent-campus');
+            }
+
+            ?>
+
+            <a class="logo" href="<?php echo $logo_url; ?>">
                 <h1 class="site-title"><?php echo get_bloginfo('name'); ?></h1> <?php //make theme option variable ?>
                 <h2 class="site-description"><?php echo get_bloginfo('description'); ?></h2> <?php //make theme option variable ?>
             </a>

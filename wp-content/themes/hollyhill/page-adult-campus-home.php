@@ -1,6 +1,6 @@
 <?php
 
-// This is the front page
+//* Template Name: Adult Campus Home
 
 // Set the page layout to full-width
 add_filter( 'genesis_pre_get_option_site_layout', 'hh_front_page_layout' );
