@@ -88,8 +88,8 @@ function hh_footer_bottom(){ ?>
                         Raleigh, NC 27610
                     </div>
                     <div class="campus col-sm-6">
-                        <strong>Childern’s Campus</strong><br />
-                        919.250.7000<br />
+                        <strong>Children’s Campus</strong><br />
+                        919.250.7600<br />
                         201 Michael J Smith Lane<br />
                         Raleigh, NC 27610
                     </div>
@@ -113,8 +113,8 @@ function hh_landing_page_footer(){ ?>
                         Raleigh, NC 27610
                     </div>
                     <div class="campus col-sm-6">
-                        <strong>Childern’s Campus</strong><br />
-                        919.250.7000<br />
+                        <strong>Children’s Campus</strong><br />
+                        919.250.7600<br />
                         201 Michael J Smith Lane<br />
                         Raleigh, NC 27610
                     </div>
