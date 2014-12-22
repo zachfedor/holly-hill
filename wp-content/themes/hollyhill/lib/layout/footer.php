@@ -26,7 +26,13 @@ function hh_pre_footer(){
                             CALL US NOW AT: <span class="contact-us-phone-number">1.800.447.1800</span>
                         </div>
                         <div class="contact-us-email">
-                            <a href="<?php echo site_url('contact-us'); ?>" class="contact-us-email-button hh-btn" ><span>EMAIL US NOW</span></a>
+                            <a href="<?php 
+                                     if(get_campus_color_scheme(get_the_ID()) == 'adult-campus'){
+                                         echo site_url('contact-us'); 
+                                     } else {
+                                         echo site_url('child-adolescent-campus/contact-us');
+                                     }
+                                     ?>" class="contact-us-email-button hh-btn" ><span>EMAIL US NOW</span></a>
                         </div>
                     </div>
                     <div class="get-directions col-sm-7">

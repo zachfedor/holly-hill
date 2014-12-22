@@ -109,7 +109,7 @@ function hh_homepage_programs(){ ?>
                     <a href="<?php echo site_url('child-adolescent-campus/our-programs/frequently-asked-questions'); ?>" class="program-btn">Frequently<br />Asked<br />Questions</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 program-col">
-                    <a href="<?php echo site_url('child-adolescent-campus/our-programs/visiting-hours-phone-times'); ?>" class="program-btn">Visiting Hours<br />& Phone Times</a>
+                    <a href="<?php echo site_url('child-adolescent-campus/about-our-childrens-campus/visiting-hours-phone-times'); ?>" class="program-btn">Visiting Hours<br />& Phone Times</a>
                 </div>
             </div>
         </div>
