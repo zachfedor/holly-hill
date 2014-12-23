@@ -2943,7 +2943,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   position: relative;
   text-align: left;
   height: 400px;
-  z-index: 999;
+  z-index: 98;
 }
 @media (max-width: 767px) {
   /* line 13, ../sass/_home.scss */
