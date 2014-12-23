@@ -46,8 +46,7 @@
     background:$green;
     width:100%;
     position: relative;
-    padding:0px 40px;
-    margin:48px 0 0;
+    margin-top: 48px;
 
     .child-campus &{
       background:$child_green;
@@ -155,14 +154,22 @@
     }
   .tagline1{
     float:left;
-    padding:55px 0 42px;
-
   }
   .tagline2{
     float:right;
-    padding:55px 0 42px;
     text-align: right;
+
+      @include breakpoint(small) {
+          width: 240px;
+      }
+      @include breakpoint(xsmall) {
+          width: 33.33333%;
+      }
   }
+    .landing-tagline {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        }
 }
 
 .title-area {

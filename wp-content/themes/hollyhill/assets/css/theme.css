@@ -1594,10 +1594,9 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   background: #6CA948;
   width: 100%;
   position: relative;
-  padding: 0px 40px;
-  margin: 48px 0 0;
+  margin-top: 48px;
 }
-/* line 52, ../sass/_header.scss */
+/* line 51, ../sass/_header.scss */
 .child-campus .site-header .ribbon {
   background: #7DC469;
 }
@@ -1607,11 +1606,11 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
     padding: 0;
   }
 }
-/* line 60, ../sass/_header.scss */
+/* line 59, ../sass/_header.scss */
 .site-header .ribbon .container {
   padding: 0;
 }
-/* line 64, ../sass/_header.scss */
+/* line 63, ../sass/_header.scss */
 .site-header .ribbon .phone {
   color: #fff;
   float: left;
@@ -1624,7 +1623,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   box-sizing: content-box;
 }
 @media (max-width: 767px) {
-  /* line 64, ../sass/_header.scss */
+  /* line 63, ../sass/_header.scss */
   .site-header .ribbon .phone {
     font-size: 15px;
     font-size: 1.5rem;
@@ -1633,7 +1632,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   }
 }
 @media screen and (max-width: 568px) {
-  /* line 64, ../sass/_header.scss */
+  /* line 63, ../sass/_header.scss */
   .site-header .ribbon .phone {
     font-size: 21px;
     font-size: 2.1rem;
@@ -1647,7 +1646,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
     height: auto !important;
   }
 }
-/* line 97, ../sass/_header.scss */
+/* line 96, ../sass/_header.scss */
 .site-header .ribbon .call-us {
   float: right;
   padding: 19px 40px;
@@ -1660,7 +1659,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   box-sizing: content-box;
 }
 @media (max-width: 992px) {
-  /* line 97, ../sass/_header.scss */
+  /* line 96, ../sass/_header.scss */
   .site-header .ribbon .call-us {
     font-size: 15px;
     font-size: 1.5rem;
@@ -1668,31 +1667,31 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   }
 }
 @media screen and (max-width: 568px) {
-  /* line 97, ../sass/_header.scss */
+  /* line 96, ../sass/_header.scss */
   .site-header .ribbon .call-us {
     display: none;
     padding: 0;
   }
 }
-/* line 123, ../sass/_header.scss */
+/* line 122, ../sass/_header.scss */
 .site-header .ribbon .hidden {
   position: relative;
   display: block !important;
 }
-/* line 130, ../sass/_header.scss */
+/* line 129, ../sass/_header.scss */
 .site-header .tagline {
   font-size: 46px;
   font-size: 4.6rem;
   text-align: left;
   color: #2A367A;
 }
-/* line 135, ../sass/_header.scss */
+/* line 134, ../sass/_header.scss */
 .site-header .tagline strong {
   font-weight: 700;
   font-family: "BemboSemiBoldItalic", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
 }
 @media (max-width: 992px) {
-  /* line 130, ../sass/_header.scss */
+  /* line 129, ../sass/_header.scss */
   .site-header .tagline {
     font-size: 35px;
     font-size: 3.5rem;
@@ -1701,7 +1700,7 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   }
 }
 @media (max-width: 767px) {
-  /* line 130, ../sass/_header.scss */
+  /* line 129, ../sass/_header.scss */
   .site-header .tagline {
     font-size: 25px;
     font-size: 2.5rem;
@@ -1710,48 +1709,63 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
   }
 }
 @media screen and (max-width: 568px) {
-  /* line 130, ../sass/_header.scss */
+  /* line 129, ../sass/_header.scss */
   .site-header .tagline {
     width: 100%;
     margin: 0;
     padding: 10px 0 !important;
   }
 }
-/* line 156, ../sass/_header.scss */
+/* line 155, ../sass/_header.scss */
 .site-header .tagline1 {
   float: left;
-  padding: 55px 0 42px;
 }
-/* line 161, ../sass/_header.scss */
+/* line 158, ../sass/_header.scss */
 .site-header .tagline2 {
   float: right;
-  padding: 55px 0 42px;
   text-align: right;
 }
+@media (max-width: 767px) {
+  /* line 158, ../sass/_header.scss */
+  .site-header .tagline2 {
+    width: 240px;
+  }
+}
+@media screen and (max-width: 568px) {
+  /* line 158, ../sass/_header.scss */
+  .site-header .tagline2 {
+    width: 33.33333%;
+  }
+}
+/* line 169, ../sass/_header.scss */
+.site-header .landing-tagline {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
 
-/* line 168, ../sass/_header.scss */
+/* line 175, ../sass/_header.scss */
 .title-area {
   float: left;
 }
 
-/* line 172, ../sass/_header.scss */
+/* line 179, ../sass/_header.scss */
 .site-title {
   line-height: 1;
 }
 
-/* line 185, ../sass/_header.scss */
+/* line 192, ../sass/_header.scss */
 .site-description {
   margin: 0 0 20px 0;
   line-height: 1;
 }
 
-/* line 192, ../sass/_header.scss */
+/* line 199, ../sass/_header.scss */
 .header-image .site-description,
 .header-image .site-title {
   display: block;
 }
 
-/* line 199, ../sass/_header.scss */
+/* line 206, ../sass/_header.scss */
 .header-widget-area {
   float: right;
 }
