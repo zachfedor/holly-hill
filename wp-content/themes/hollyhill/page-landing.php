@@ -33,6 +33,7 @@ remove_action( 'genesis_footer', 'hh_footer' ) ;
 add_action( 'genesis_footer', 'hh_landing_page_footer' ) ;
 
 remove_action( 'genesis_footer', 'hh_footer_bottom' ) ;
+remove_action( 'genesis_footer', 'hh_pre_footer' ) ;
 add_action( 'genesis_footer', 'hh_landing_page_footer_bottom' ) ;
 
 remove_action( 'genesis_after_header', 'genesis_do_nav' ) ;
@@ -69,13 +70,13 @@ function hh_landing_page_bottom(){ ?>
 
         <div class="container">
             <div class="row">
-                <div class="button-group col-sm-3 col-sm-offset-3 child-button">
-                    <h4>Children's<br />Campus</h4>
+                <div class="button-group col-med-4 col-sm-5 col-med-offset-2 col-sm-offset-1 child-button">
+                    <h4>Children's Campus</h4>
                     <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/landing-page-child-thumb.jpg" />
                     <a class="landing-continue" href="<?php echo site_url('child-adolescent-campus'); ?>">Continue <span class="icon"></span></a>
                 </div>
-                <div class="button-group col-sm-3 adult-button">
-                    <h4>Adult<br />Campus</h4>
+                <div class="button-group col-med-4 col-sm-5 adult-button">
+                    <h4>Adult Campus</h4>
                     <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/landing-page-adult-thumb.jpg" />
                     <a class="landing-continue" href="<?php echo site_url('adult-campus'); ?>">Continue <span class="icon"></span></a>
                 </div>
