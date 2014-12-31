@@ -127,9 +127,10 @@
 
   }
   .tagline{
-    @include font-size(46);
+    @include font-size(43);
     text-align: left;
     color: #2A367A;
+    padding: 40px 0;
 
     strong {
       font-weight:700;

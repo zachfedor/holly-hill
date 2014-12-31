@@ -1680,12 +1680,13 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
 }
 /* line 129, ../sass/_header.scss */
 .site-header .tagline {
-  font-size: 46px;
-  font-size: 4.6rem;
+  font-size: 43px;
+  font-size: 4.3rem;
   text-align: left;
   color: #2A367A;
+  padding: 40px 0;
 }
-/* line 134, ../sass/_header.scss */
+/* line 135, ../sass/_header.scss */
 .site-header .tagline strong {
   font-weight: 700;
   font-family: "BemboSemiBoldItalic", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
@@ -1716,56 +1717,56 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
     padding: 10px 0 !important;
   }
 }
-/* line 155, ../sass/_header.scss */
+/* line 156, ../sass/_header.scss */
 .site-header .tagline1 {
   float: left;
 }
-/* line 158, ../sass/_header.scss */
+/* line 159, ../sass/_header.scss */
 .site-header .tagline2 {
   float: right;
   text-align: right;
 }
 @media (max-width: 767px) {
-  /* line 158, ../sass/_header.scss */
+  /* line 159, ../sass/_header.scss */
   .site-header .tagline2 {
     width: 240px;
   }
 }
 @media screen and (max-width: 568px) {
-  /* line 158, ../sass/_header.scss */
+  /* line 159, ../sass/_header.scss */
   .site-header .tagline2 {
     width: 33.33333%;
   }
 }
-/* line 169, ../sass/_header.scss */
+/* line 170, ../sass/_header.scss */
 .site-header .landing-tagline {
   padding-left: 15px !important;
   padding-right: 15px !important;
 }
 
-/* line 175, ../sass/_header.scss */
+/* line 176, ../sass/_header.scss */
 .title-area {
   float: left;
 }
 
-/* line 179, ../sass/_header.scss */
+/* line 180, ../sass/_header.scss */
 .site-title {
   line-height: 1;
 }
 
-/* line 192, ../sass/_header.scss */
+/* line 193, ../sass/_header.scss */
 .site-description {
   margin: 0 0 20px 0;
   line-height: 1;
 }
 
-/* line 199, ../sass/_header.scss */
+/* line 200, ../sass/_header.scss */
 .header-image .site-description,
 .header-image .site-title {
   display: block;
 }
 
-/* line 206, ../sass/_header.scss */
+/* line 207, ../sass/_header.scss */
 .header-widget-area {
   float: right;
 }
